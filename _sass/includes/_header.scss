@@ -1,10 +1,19 @@
 .site-header {
-  @extend %padding-small;
+  // @extend %padding-small;
+  // padding-top: 15px;
+  // padding-right: 60px;
+  // padding-bottom: 15px;
+  // padding-left: 60px;
+  padding-top: 1%;
+  padding-right: 4%;
+  padding-bottom: 0.5%;
+  padding-left: 4%;
   background: $brand-color;
   border-bottom: 1px solid $border-color;
   display: inline-block;
   float: left;
   width: 100%;
+  position: relative;
 
   a {
     color: $header-link-color;
@@ -17,6 +26,7 @@
     margin-top: -3px;
     border-radius: 0.2em;
     margin-right: 1em;
+    // vertical-align: middle;
   }
 
   .site-title {
@@ -24,6 +34,7 @@
     font-weight: bold;
     font-size: 1em;
     line-height: 1.5;
+    // vertical-align: middle;
   }
 
   .site-nav {

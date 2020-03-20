@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
-baseurl: ""
-url: "https://zorkaltseva.github.io/"
+baseurl: "/mariazork.github.io"
+url: "https://mariazork.github.io/"
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
@@ -12,9 +12,10 @@ theme_settings:
   description: "Tech Machine Learning Blog" # used by search engines
 
   # Header and footer text
+  header_title: <h2>Maria Zorkaltseva</h2>
+  header_subtitle: <h4>Machine Learning Engineer</h4>
   header_text: >
-     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-     <p>Remove all header text in <code>_config.yml</code> to disable this feature.</p>
+     <p>Computer vision and Natural Language Processing specialist</p>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a>

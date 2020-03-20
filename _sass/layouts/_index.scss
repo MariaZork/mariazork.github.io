@@ -1,24 +1,47 @@
 // Header text feature
 .call-out {
   @extend %padding-regular;
+  padding-left: 12%;
   display: inline-block;
   width: 100%;
   background-color:$header-desc-background-color;
   background-size: cover;
   font-size: 1.2em;
-  text-align: center;
+  text-align: left;
   color: $header-desc-text-color;
+
 }
+
+.call-out h2 {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: $font-family-headings;
+}
+
+.call-out h4 {
+  margin: 0;
+  color:burlywood;
+}
+
+.call-out p {
+  margin: 0;
+  color: burlywood;
+}
+
 .call-out p:last-child {
   margin-bottom: 0;
 }
+
 .call-out a {
   color: $header-desc-link-color
 }
+
 // Post listing
 .posts {
   .post-teaser {
     @extend %padding-regular;
+    // padding-left: 12%;
+    // text-align: left;
     width: 100%;
     margin-bottom: 0;
     display: inline-block;

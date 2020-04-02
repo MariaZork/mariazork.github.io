@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/mariazork.github.io"
+baseurl: ""
 url: "https://mariazork.github.io/"
 
 # THEME-SPECIFIC CONFIGURATION
@@ -45,7 +45,7 @@ theme_settings:
 
   # Scripts
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
+  disqus_shortname: https-mariazork-github-io
   katex: true # Enable if using math markup
   search: false # Enable the search feature
 

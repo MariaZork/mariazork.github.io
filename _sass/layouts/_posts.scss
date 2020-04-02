@@ -1,6 +1,7 @@
 .post-content > :last-child {
   margin-bottom: 0;
 }
+
 article,
 .comments {
   @extend %padding-regular;
@@ -37,12 +38,14 @@ header {
   margin: 0;
   text-transform: uppercase;
 }
+
 .feature-image {
   padding: 0%;
   .post-link {
     color: $feature-image-text-color;
   }
   header {
+    // text-align: justify;
     color: $feature-image-text-color;
     background-size: $feature-image-size;
     margin-bottom: 0;
@@ -53,5 +56,17 @@ header {
   }
   .post-content {
     @extend %padding-regular;
+    font-size: 1.2em;
+    text-align: justify;
+      .img {
+        @extend %padding-regular;
+        // width: 200px;
+        // height: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .katex { font-size: 1.1em; }
   }
 }

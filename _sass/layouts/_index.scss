@@ -51,10 +51,20 @@
       @extend .body-link;
     }
   }
-  .excerpt {
-    margin-top: 1em;
+}
+
+.excerpt {
+  margin-top: 1em;
+  text-align: justify;
+  img {
+    display: inline-block;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
+
 // Pagination
 .pagination .button {
   margin: 0 1.5em;
@@ -62,6 +72,7 @@
     vertical-align: middle;
   }
 }
+
 .pagination {
   padding: $padding-small $padding-large 0 $padding-large;
   text-align: center;

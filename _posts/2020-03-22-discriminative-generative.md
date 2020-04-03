@@ -83,9 +83,9 @@ $$p(y \vert x_1, \dots, x_N) = \frac{p(y) \prod_{i} p(x_i \vert y)}{\sum_{j} p(y
 &nbsp;&nbsp;&nbsp;&nbsp;Among another class of generative models with an *implicit PDF*, differentiable generator nets are widespread, it includes widely used *Generative Adversarial Networks (GAN)* represented by generator and discriminator networks. Differentiable generator networks are used to generate samples directly without any probabilistic assumptions, in the case of GAN we're training neural network to represent a parametric family of nonlinear functions $$g$$ and, using training data, we derive parameters that can help to select the desired function. <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;In other words, some differentiable generator transforms examples of latent variables $$\mathbf{z}$$ into examples $$\mathbf{x}$$ using a differentiable function $$g(\mathbf{z}; \boldsymbol{\theta}^{(g)})$$, which represented by neural network. For example, we take samples from normal distribution with zero mean and  identity covariance matrix $$\mathbf{z} \sim N(0, \mathbf{\Iota})$$ and want to get samples $$\mathbf{x} \sim N(\mu, \mathbf{\Sigma})$$, which is normally distributed with mean $$\mu$$ and covariance matrix $$\mathbf{\Sigma}$$. We can apply to $$\mathbf{z}$$, simple generative network with one affine layer
 
-$$\mathbf{x} = g(\mathbf{z}) = \mu + L\mathbf{z}$$
+$$\mathbf{x} = g(\mathbf{z}) = \mu + \mathbf{L}\mathbf{z}$$
 
-where $$L$$ is determined by the Cholesky decomposition of the matrix $$\mathbf{\Sigma}$$.<br/>
+where $$\mathbf{L}$$ is determined by the Cholesky decomposition of the matrix $$\mathbf{\Sigma}$$.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;We can assume that $$g$$ defines a nonlinear change of variables that transforms the distribution of $$\mathbf{z}$$ into the desired distribution of $$\mathbf{x}$$. For reversible differentiable continuous function $$g$$ identity holds
 
 $$p_{z}(\mathbf{z}) = p_{x}(g(\mathbf{z})) \, \lvert \det(\frac{\partial{g}}{\partial{\mathbf{z}}}) \rvert$$

@@ -1,3 +1,31 @@
+.post-content {
+  @extend %padding-regular;
+  font-size: 1.2em;
+  text-align: justify;
+    .img {
+      @extend %padding-regular;
+      // width: 60%;
+      // height: 60%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  .katex-display > .katex {
+      max-width: 100%;
+      // font-size: 1.1em;
+  }
+
+  .katex-display > .katex > .katex-html {
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-left: 2px;
+      padding-right: 2px;
+  }
+
+}
+
 .post-content > :last-child {
   margin-bottom: 0;
 }
@@ -54,19 +82,5 @@ header {
       color: rgba($feature-image-text-color, .7);
     }
   }
-  .post-content {
-    @extend %padding-regular;
-    font-size: 1.2em;
-    text-align: justify;
-      .img {
-        @extend %padding-regular;
-        // width: 200px;
-        // height: 200px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
 
-      .katex { font-size: 1.1em; }
-  }
 }

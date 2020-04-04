@@ -44,7 +44,7 @@ theme_settings:
   youtube:
 
   # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  google_analytics: UA-162826684-1 # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname: https-mariazork-github-io
   katex: true # Enable if using math markup
   search: false # Enable the search feature

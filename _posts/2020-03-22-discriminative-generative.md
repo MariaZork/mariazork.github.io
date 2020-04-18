@@ -5,10 +5,12 @@ author: Maria Zorkaltseva
 categories: [Machine learning theory]
 tags: [binary cross-entropy loss, MLE, logistic regression, bayes theorem, naive bayes classifier, GAN]
 feature-img: "assets/img/sample_feature_img.png"
+excerpt_begin_separator: <!--excerpt-->
 excerpt_separator: <!--more-->
 comments: true
 ---
 
+<!--excerpt-->
 In this article, we will consider key concepts of discriminative and generative models, differences between them. In the light of these concepts, we will describe logistic regression, Naive Bayes classifier and differentiable generator nets.
 
 ![bayes theorem](/assets/img/2020-03-22-discriminative-generative/bayes theorem.jpg)

@@ -6,7 +6,7 @@
  *    user zoom.
  */
 
-html {
+ html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -415,13 +415,32 @@ optgroup {
 /**
  * Remove most spacing between table cells.
  */
+ 
+//  $on-palm:          600px !default;
+//  $on-laptop:        800px !default;
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+// table {
+//   border-collapse: collapse;
+//   border-spacing: 0;
+// }
 
-td,
-th {
-  padding: 0;
-}
+// td,
+// th {
+//   padding: 0;
+// }
+
+// @mixin media-query($device) {
+//   @media screen and (max-width: $device) {
+//     @content;
+//   }
+// }
+
+// @mixin relative-font-size($ratio) {
+//   font-size: #{$ratio}rem;
+// }
+
+// @import
+//   'base/variables',
+//   'base/global',
+//   'base/utility'  
+// ;

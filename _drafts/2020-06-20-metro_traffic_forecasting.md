@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Part 1 - Machine Learning Time Series Forecasting with Pytorch&#58; Using LSTM and GRU for metro traffic prediction
+title: Part 1 - Machine Learning Time Series Forecasting&#58; Using LSTM and GRU for metro traffic prediction (PyTorch)
 author: Maria Zorkaltseva
 categories: [Deep Learning]
 tags: [machine learning, deep learning, pytorch, lstm, gru, time series]
@@ -14,9 +14,63 @@ comments: true
 description
 <!--more-->
 
-### Introduction
-### Time series theory
-### Metro Traffic Prediction using LSTM-based recurrent neural network
+### Table of contents
+1. [Time series forecasting methods overview](#introduction)
+2. [Dataset](#paragraph1)
+    1. [Sub paragraph](#subparagraph1)
+3. [Metro Traffic Prediction using LSTM-based recurrent neural network](#paragraph2)
+
+
+### Time series forecasting methods overview <a name="introduction"></a>
+A time series is a set of observations, each one is being recorded at the specific time $$t$$. It can be weather observations, for example, a records of the temperature for a month, it can be observations of currency quotes during the day or any other process aggregated by time. **Time series forecasting** can be determened as the act of predicting the future by understanding the past. The model for forecasting can rely on one variable and this is a **univariate case** or when more than one variable taken into consideration it will be **multivariate case**. 
+
+**Stochastic Linear Models:**
+
+- Autoregressive (AR);
+- Moving Average (MA);
+- Autoregressive Moving Average (ARMA);
+- Autoregressive Integrated Moving Average (ARIMA);
+- Seasonal ARIMA (SARIMA);
+
+For above family of models, the **stationarity condition** must be satisfied. Loosely speaking, a stochastic process is stationary, if its statistical properties do not change with time.
+
+**Stochastic Non-Linear Models:**
+
+- nonlinear autoregressive exogenous models (NARX);
+- autoregressive conditional heteroskedasticity (ARCH);
+- generalized autoregressive conditional heteroskedasticity (GARCH);
+
+**Machine Learning Models**
+
+- Hidden Markov Model;
+- Least-square SVM (LS-SVM);
+- Dynamic Least-square SVM (DLS-SVM);
+- Feed Forward Network (FNN);
+- Time Lagged Neural Network (TLNN);
+- Seasonal Artificial Neural Network (SANN);
+- Recurrent Neural Networks (RNN).
+
+In this part, we will start with comparative analysis of RNN architectures, such as Long short-term memory (LSTM) and Gated recurrent units (GRUs), for time series forecasting ptoblems using PyTorch. 
+
+### Dataset <a name="paragraph1"></a>
+We will use [Metro Interstate Traffic Volume Data Set](https://archive.ics.uci.edu/ml/datasets/Metro+Interstate+Traffic+Volume) from UC Irvine Machine Learning Repository, which contains large number of datasets for various tasks in machine learning. We will investigate how such weather and holiday features influence the metro traffic in US.
+
+Attribute Information:
+
+<p style="font-size: 0.8em">
+<b>holiday</b> Categorical US National holidays plus regional holiday, Minnesota State;<br />
+<b>temp</b>    Numeric Average temp in kelvin;<br />
+<b>rain_1h</b> Numeric Amount in mm of rain that occurred in the hour;<br />
+<b>snow_1h</b> Numeric Amount in mm of snow that occurred in the hour;<br />
+<b>clouds_all</b> Numeric Percentage of cloud cover;<br />
+<b>weather_main</b> Categorical Short textual description of the current weather;<br />
+<b>weather_description</b> Categorical Longer textual description of the current weather;<br />
+<b>date_time</b> DateTime Hour of the data collected in local CST time;<br />
+<b>traffic_volume</b> Numeric Hourly I-94 ATR 301 reported westbound traffic volume.<br />
+</p>
+Our target variable will be **traffic_volume**.
+
+### Metro Traffic Prediction using LSTM-based recurrent neural network <a name="paragraph2"></a>
 
 **In [1]:**
 

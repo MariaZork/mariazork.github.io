@@ -23,7 +23,7 @@ c.Application.verbose_crash=True
 def path2support(path):
     """Turn a file path into a URL"""
     print(os.path.basename(path))
-    return '/assets/img/nb_images' + os.path.basename(path)
+    return '/assets/img/nb_images/' + os.path.basename(path)
 
 c.MarkdownExporter.filters = {'path2support': path2support}
 

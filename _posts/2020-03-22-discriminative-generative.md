@@ -2,8 +2,8 @@
 layout: post
 title: Discriminative and generative models concept
 author: Maria Zorkaltseva
-categories: [Machine learning theory]
-tags: [binary cross-entropy loss, MLE, logistic regression, bayes theorem, naive bayes classifier, GAN]
+categories: [Machine Learning Theory]
+tags: [machine learning, binary cross-entropy loss, MLE, logistic regression, bayes theorem, naive bayes classifier, GAN]
 feature-img: "assets/img/sample_feature_img.png"
 excerpt_begin_separator: <!--excerpt-->
 excerpt_separator: <!--more-->
@@ -66,7 +66,7 @@ As a result, in parentheses we can see the familiar binary cross entropy functio
 * Variational autoencoder;
 * Generative adversarial network.
 
-The main goal of the generative model is as follows: for training dataset $$\mathit{D}=\{\mathbf{x}^{(i)} \vert i < \mathit{N} \isin \Z\}$$ maximize $$\prod_{i=1}^N \, p(\mathbf{x}^{(i)}; \boldsymbol{\theta})$$ over $$\boldsymbol{\theta}$$, so this equivalent to 
+The main goal of the generative model is as follows: for training dataset $$\mathit{D}=\{\mathbf{x}^{(i)} \vert i < \mathit{N} \isin \Z\}$$ maximize $$\prod_{i=1}^N \, p(\mathbf{x}^{(i)}; \boldsymbol{\theta})$$ over $$\boldsymbol{\theta}$$, so this equivalent to
 
 $$\boldsymbol{\hat{\theta}} = \underset{\boldsymbol{\theta}}{\argmax} \, \sum_{i=1}^N \, \log{p}( \mathbf{x}^{(i)}; \, \boldsymbol{\theta})$$
 
@@ -77,7 +77,7 @@ $$KL(p_{data}(\mathbf{X}), p(\mathbf{X}, \boldsymbol{\theta})) = \int p_{data}(\
 and minimization of this expression is equivalent to maximization of likelihood. In generative models, the probability density function (PDF) can be expressed, either explicitly or implicitly. In the case of an *explicit PDF*, probabilistic assumptions are made, which usually come down to the fact that the total distribution is expressed as the product of other distributions. As an example, we can consider *Naive Bayes algorithm*. This method estimates conditional propability $$\mathit{p}(y \vert \mathbf{x})$$ from joint probability
 
  $$p(\mathbf{x}, y) = p(\mathbf{x} \vert y)p(y) = p(x_1, \dots, x_N \vert y)p(y) = p(y)\prod_{i=1}^N p(x_i \vert y)$$
- 
+
 where $$y$$ is some label, and $$\mathbf{x}$$ is input sequence. Thus, algorithm makes the explicit assumption that each $$x_i$$ is conditionally independent of each of the other $$x_k$$ given label $$y$$. The fundamental equation for the Naive Bayes classifier will look as follows
 
 $$p(y \vert x_1, \dots, x_N) = \frac{p(y) \prod_{i} p(x_i \vert y)}{\sum_{j} p(y_j) \prod_{i} p(x_i \vert y_j)}$$

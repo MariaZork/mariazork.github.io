@@ -2,30 +2,28 @@
     @extend %padding-small;
     display: inline-block;
     width: 100%;
-    background-color:$header-desc-background-color;
+    background-color: $header-desc-background-color;
     background-size: auto;
     font-family: $font-family-headings;
     text-align: center;
     color: $header-desc-text-color;
     margin-bottom: 0;
     vertical-align: middle;
-  }
+}
 
 .about-content {
     @extend %padding-regular;
     text-align: justify;
     // margin-top: auto;
-
-  a {
-      color: $link-color;
+    a {
+        color: $link-color;
     }
-
-  img {
-    margin-right: 3%;
-    width: 200px;
-    height: 200px;
-    // padding: 5px;
-    border: $border-color;
-    float: left;
-  }
+    img {
+        margin-right: 3%;
+        width: 200px;
+        height: 200px;
+        // padding: 5px;
+        border: $border-color;
+        float: left;
+    }
 }

@@ -1,5 +1,9 @@
 .search {
-    h1, h2, h3, h4, h5 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
         margin-bottom: 0;
     }
     a.search-link {
@@ -9,7 +13,7 @@
         }
     }
     #not-found {
-      text-align: center;
-      font-weight: bold;
+        text-align: center;
+        font-weight: bold;
     }
 }

@@ -20,14 +20,14 @@ This tutorial contains brief overview of statistical and machine learning method
 - [Time series forecasting methods overview](#time-series-forecasting-methods-overview)
 - [Dataset](#dataset)
 - [Metro Traffic Prediction using LSTM-based recurrent neural network](#metro-traffic-prediction-using-lstm-based-recurrent-neural-network)
-  - [Exploratory Data Analysis (EDA) and Scaling](#exploratory-data-analysis-eda-and-scaling)
-  - [Preparing training dataset/Visualizations](#preparing-training-datasetvisualizations)
-  - [LSTM Time Series Predictor Model](#lstm-time-series-predictor-model)
-  - [Train and Evaluate Helping Functions](#train-and-evaluate-helping-functions)
-  - [1-Layer LSTM model](#1-layer-lstm-model)
-  - [2-Layer LSTM](#2-layer-lstm)
-  - [Bidirectional 1-Layer LSTM](#bidirectional-1-layer-lstm)
-  - [Experimental results on val data](#experimental-results-on-val-data)
+    - [Exploratory Data Analysis (EDA) and Scaling](#exploratory-data-analysis-eda-and-scaling)
+    - [Preparing training dataset/Visualizations](#preparing-training-datasetvisualizations)
+    - [LSTM Time Series Predictor Model](#lstm-time-series-predictor-model)
+    - [Train and Evaluate Helping Functions](#train-and-evaluate-helping-functions)
+    - [1-Layer LSTM model](#1-layer-lstm-model)
+    - [2-Layer LSTM](#2-layer-lstm)
+    - [Bidirectional 1-Layer LSTM](#bidirectional-1-layer-lstm)
+    - [Experimental results on val data](#experimental-results-on-val-data)
 - [Summary](#summary)
 
 <!-- /TOC -->
@@ -82,6 +82,8 @@ Attribute Information:
 Our target variable will be **traffic_volume**. Here we will consider multivariate multi-step prediction case with LSTM-based recurrent neural network architecture.
 
 ### Metro Traffic Prediction using LSTM-based recurrent neural network
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MariaZork/time-series-forecasting-tutorials/blob/master/time-series-forecasting-part1-LSTM.ipynb)
 
 I used Google Colab Notebooks to calculate experiments. Here, for convinience, I
 mounted my Google drive where I stored the files.

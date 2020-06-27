@@ -12,10 +12,9 @@ theme_settings:
   description: "Tech Machine Learning Blog" # used by search engines
 
   # Header and footer text
-  header_title: <h2>Maria Zorkaltseva</h2>
-  header_subtitle: <h4>Machine Learning Engineer</h4>
-  header_text: >
-     <p>Computer vision and Natural Language Processing specialist</p>
+  header_title: <h1>Maria Zorkaltseva</h1>
+  header_subtitle: <h4>Machine Learning Developer</h4>
+  header_text: <p>Computer vision and Natural Language Processing specialist</p>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a>
@@ -78,7 +77,10 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-plugins: [jekyll-paginate, 'jekyll-seo-tag', 'jekyll-feed']
+plugins: [jekyll-paginate, 'jekyll-seo-tag', 'jekyll-feed', jekyll-sitemap]
 exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
   - Gemfile
   - Gemfile.lock

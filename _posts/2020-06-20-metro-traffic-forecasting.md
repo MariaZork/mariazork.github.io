@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Part 1 - Machine Learning Time Series Forecasting&#58; Using LSTM-based model for metro traffic prediction (PyTorch)
+title: Time Series Forecasting (Part 1)&#58; 
+subtitle: LSTM-based model for metro traffic prediction (PyTorch)
 author: Maria Zorkaltseva
 categories: [Deep Learning]
 tags: [machine learning, deep learning, pytorch, lstm, time series]
@@ -19,14 +20,14 @@ This tutorial contains brief overview of statistical and machine learning method
 - [Time series forecasting methods overview](#time-series-forecasting-methods-overview)
 - [Dataset](#dataset)
 - [Metro Traffic Prediction using LSTM-based recurrent neural network](#metro-traffic-prediction-using-lstm-based-recurrent-neural-network)
-    - [Exploratory Data Analysis (EDA) and Scaling](#exploratory-data-analysis-eda-and-scaling)
-    - [Preparing training dataset/Visualizations](#preparing-training-datasetvisualizations)
-    - [LSTM Time Series Predictor Model](#lstm-time-series-predictor-model)
-    - [Train and Evaluate Helping Functions](#train-and-evaluate-helping-functions)
-    - [1-Layer LSTM model](#1-layer-lstm-model)
-    - [2-Layer LSTM](#2-layer-lstm)
-    - [Bidirectional 1-Layer LSTM](#bidirectional-1-layer-lstm)
-- [Experimental results on val data](#experimental-results-on-val-data)
+  - [Exploratory Data Analysis (EDA) and Scaling](#exploratory-data-analysis-eda-and-scaling)
+  - [Preparing training dataset/Visualizations](#preparing-training-datasetvisualizations)
+  - [LSTM Time Series Predictor Model](#lstm-time-series-predictor-model)
+  - [Train and Evaluate Helping Functions](#train-and-evaluate-helping-functions)
+  - [1-Layer LSTM model](#1-layer-lstm-model)
+  - [2-Layer LSTM](#2-layer-lstm)
+  - [Bidirectional 1-Layer LSTM](#bidirectional-1-layer-lstm)
+  - [Experimental results on val data](#experimental-results-on-val-data)
 - [Summary](#summary)
 
 <!-- /TOC -->
@@ -63,7 +64,7 @@ For above family of models, the **stationarity condition** must be satisfied. Lo
 
 ### Dataset
 
-We will use [Metro Interstate Traffic Volume Data Set](https://archive.ics.uci.edu/ml/datasets/Metro+Interstate+Traffic+Volume) from UC Irvine Machine Learning Repository, which contains large number of datasets for various tasks in machine learning. We will investigate how such weather and holiday features influence the metro traffic in US.
+We will use [Metro Interstate Traffic Volume Data Set](https://archive.ics.uci.edu/ml/datasets/Metro+Interstate+Traffic+Volume) from UC Irvine Machine Learning Repository, which contains large number of datasets for various tasks in machine learning. We will investigate how weather and holiday features influence the metro traffic in US.
 
 Attribute Information:
 
@@ -78,7 +79,7 @@ Attribute Information:
 <b>date_time</b> DateTime Hour of the data collected in local CST time;<br />
 <b>traffic_volume</b> Numeric Hourly I-94 ATR 301 reported westbound traffic volume.<br />
 </p>
-Our target variable will be **traffic_volume**.
+Our target variable will be **traffic_volume**. Here we will consider multivariate multi-step prediction case with LSTM-based recurrent neural network architecture.
 
 ### Metro Traffic Prediction using LSTM-based recurrent neural network
 
@@ -234,7 +235,6 @@ data.head()
 </table>
 </div>
 
-Here we can see several <br/>
 **categorical** features: holiday, weather_main, weather_description.<br/>
 **Continious** features: temp, rain_1h, show_1h, clouds_all.<br/>
 **Target variable**: traffic_volume
@@ -1711,7 +1711,7 @@ while i < len(testX):
 <p><img src="/assets/img/nb_images/metro_traffic_forecasting_57_18.png"/></p>
 </div>
 
-### Experimental results on val data
+#### Experimental results on val data
 
 | Model      | Best MSE loss          |
 | ------------- |:-------------:|
@@ -1720,3 +1720,12 @@ while i < len(testX):
 |Bidirectional 1-layer LSTM  | 0.66894 |
 
 ### Summary
+
+At the first glance, all three models based on LSTM showed approximately the same results, so you can choose a single-layer LSTM without loss of quality. In cases where computational efficiency is a crucial part you may chose GRU model, which has less parameters to optimize than LSTM model. The ways you can improve existing deep learning model:
+
+- work on data cleanliness, look for essential features, which are strongly related to the target variable;
+- manual and automatic feature engineering;
+- optimization of hyperparameters (length of hidden state vector, batch size, number of epochs, learning rate, number of layers);
+- try different optimization algorithm;
+- try different loss function which will be differentiable and adequate to task you're solving;
+- use ensembles of prediction vectors.

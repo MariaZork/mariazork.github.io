@@ -9,7 +9,8 @@ tags: ["maria zorkaltseva", "мария зоркальцева"]
 
 I’m proficient in such machine learning and deep learning areas as computer vision, natural language processing, predictive analytics. Also I have more than seven years of experience in science and strong background as a researcher. I have 19 publications in well-known foreign and Russian magazines. My main programming language is Python (with additional libraries such as numpy, scipy, matplotlib, pandas, scikit-learn), also I’m using Keras and PyTorch for deep learning. Due to mathematical education, I have background in pure mathematics and statistics.
 
-### Certifications:
+### Certifications
+
 - [Specialization IBM AI Engineering](https://www.coursera.org/account/accomplishments/specialization/XS3WVRQXBC4Z)
     >*Coursera*, *IBM*, *2020*<br />
     This specialization contains 6 courses such as: Machine Learning with Python, Scalable Machine Learning on Big Data using Apache Spark, Introduction to Deep Learning &
@@ -23,19 +24,20 @@ I’m proficient in such machine learning and deep learning areas as computer vi
     Good course on Java basics by Computer Science Center.
 - [Hadoop. System for big data processing](https://stepik.org/cert/106998)
     >*stepik.org*, *Mail.ru Group*, *2018*<br />
-    Course which is focused on Hadoop ecosystem, MapReduce concept, NoSQL DataBases and Spark. 
+    Course which is focused on Hadoop ecosystem, MapReduce concept, NoSQL DataBases and Spark.
 - [Introduction to Machine Learning](https://www.coursera.org/account/accomplishments/certificate/3PQD4U7UTPJ6)
     >*Coursera*, *HSE&Yandex*, *2018*<br />
-    This course is performed by **Higher School of Economics and Yandex School of Data Analysis**. People who want to take this course must have a strong mathematical background. 
+    This course is performed by **Higher School of Economics and Yandex School of Data Analysis**. People who want to take this course must have a strong mathematical background.
 - [Machine leaning](https://www.coursera.org/account/accomplishments/certificate/7XSCNX4AL85L)
     >*Coursera*, *Stanford University*, *2017*<br />
     This course is must have for every beginner machine learner engineer, which includes all standard
  machine learning methods, feed forward networks, recomendation systems, anomality detection.<br />
 
 ### Publications:<br />
+
 Here represented some of my scientific papers:<br />
 
- - [Radiation of high-power ultrawideband pulses with elliptical polarization by fourelement
+- [Radiation of high-power ultrawideband pulses with elliptical polarization by fourelement
 array of cylindrical helical antennas](/assets/pdf/laser&particle.pdf), *2018*, *Laser and Particle Beams*<br />
 - [Numerical Modeling of Ultra Wideband Combined Antennas](/assets/pdf/numerical_modeling.pdf), *2017*, *Russian Physics Journal*<br />
 - [A source of high-power pulses of elliptically polarized ultrawideband radiation](/assets/pdf/rsi.pdf), *2014*, *Review of Scientific Instruments*<br />

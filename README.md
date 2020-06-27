@@ -24,7 +24,13 @@ To serve your site with drafts:
 jekyll serve --drafts
 ```
 
-To access your site use following links: "http://localhost:8080" or "http://127.0.0.1:8080" 
+Serve the site and auto-regenerating on changes
+
+```sh
+jekyll serve --livereload
+```
+
+To access your site use following links: "http://localhost:8080" or "http://127.0.0.1:8080"
 
 If you're using Docker Toolbox on Windows, try accessing "http://192.168.99.100:8080" instead.
 

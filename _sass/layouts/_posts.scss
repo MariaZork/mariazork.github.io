@@ -1,6 +1,6 @@
 .post-content {
     @extend %padding-regular;
-    font-size: 1.3em;
+    font-size: 1.1em;
     text-align: justify;
     .img {
         @extend %padding-regular;
@@ -21,6 +21,12 @@
         padding-left: 2px;
         padding-right: 2px;
     }
+
+    ul,
+    ol {
+        margin-left: 1.0em;
+    }
+
 }
 
 .post-content> :last-child {
@@ -36,10 +42,12 @@ article,
 }
 
 article {
+    .title {
+        margin-bottom: 0.5em     
+    }
     .subtitle {
-        font-size: 1.45em;
-        font-weight: normal;
-        margin: 0;
+        font-weight: bold;
+        margin-bottom: 0.5em
     }
     header {
         margin-bottom: 6%;
@@ -73,7 +81,7 @@ header {
         color: $feature-image-text-color;
     }
     header {
-        // text-align: justify;
+        text-align: justify;
         color: $feature-image-text-color;
         background-size: $feature-image-size;
         margin-bottom: 0;
@@ -83,6 +91,8 @@ header {
         }
     }
 }
+
+
 
 .dataframe {
     font-size: 0.6em;

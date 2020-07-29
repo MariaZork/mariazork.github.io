@@ -1,15 +1,16 @@
 # SITE CONFIGURATION
 baseurl: ""
 url: "https://mariazork.github.io/"
+author: Maria Zorkaltseva
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: AI Blog
+  title: Maria Zorkaltseva's Tech Blog
   avatar: assets/img/android-chrome-512x512.png
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
-  description: "Tech Machine Learning Blog" # used by search engines
+  description: "Maria Zorkaltseva's tech blog on a variety of topics in Mathematics, Statistics, Data Structures and Algorithms, Machine Learning, Deep Learning and other related themes" # used by search engines
 
   # Header and footer text
   header_title: <h1>Maria Zorkaltseva</h1>

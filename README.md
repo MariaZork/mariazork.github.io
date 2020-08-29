@@ -12,9 +12,16 @@ Then run it with port and directory mapping options:
 docker run --rm -ti -p 8080:4000 -v $PWD:/src/ jekyll_env  bash
 ```
 
+To install neseccary packages:
+
+```sh
+bundler install
+```
+
 To serve your site just type following command in docker container bash command line:
 
 ```sh
+bundler exec jekyll serve --host 0.0.0.0
 jekyll serve
 ```
 

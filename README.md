@@ -12,7 +12,7 @@ Then run it with port and directory mapping options:
 docker run --rm -ti -p 8080:4000 -v $PWD:/src/ jekyll_env  bash
 ```
 
-To install neseccary packages:
+To install necessary packages:
 
 ```sh
 bundler install

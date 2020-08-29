@@ -5,8 +5,10 @@ author: Maria Zorkaltseva
 categories: [Machine Learning Theory]
 tags: [machine learning, binary cross-entropy loss, MLE, logistic regression, bayes theorem, naive bayes classifier, GAN]
 feature-img: "assets/img/sample_feature_img.png"
+image: "assets/img/2020-03-22-discriminative-generative/bayes theorem.jpg"
 excerpt_begin_separator: <!--excerpt-->
 excerpt_separator: <!--more-->
+summary: This post consider key concepts of discriminative and generative models in machine learning and differences between them
 comments: true
 ---
 

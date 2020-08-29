@@ -19,6 +19,7 @@ theme_settings:
   header_text_feature_image:
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a>
+  twitter_preview_image: assets/img/grid-AI.jpg
   # Icons
   rss: false
   email_address: maria.zorkaltseva@gmail.com # Full email address, e.g. "sam@example.com"

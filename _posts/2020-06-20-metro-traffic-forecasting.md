@@ -9,7 +9,6 @@ feature-img: "assets/img/sample_feature_img.png"
 image: assets/img/2020-03-22-discriminative-generative/bayes theorem.jpg
 excerpt_begin_separator: <!--excerpt-->
 excerpt_separator: <!--more-->
-summary: This post contains brief overview of statistical and machine learning methods for time series forecasting, experiments and comparative analysis of Long short-term memory (LSTM) based architectures for solving above mentioned problem.
 comments: true
 ---
 
@@ -22,14 +21,14 @@ This tutorial contains brief overview of statistical and machine learning method
 - [Time series forecasting methods overview](#time-series-forecasting-methods-overview)
 - [Dataset](#dataset)
 - [Metro Traffic Prediction using LSTM-based recurrent neural network](#metro-traffic-prediction-using-lstm-based-recurrent-neural-network)
-    - [Exploratory Data Analysis (EDA) and Scaling](#exploratory-data-analysis-eda-and-scaling)
-    - [Preparing training dataset/Visualizations](#preparing-training-datasetvisualizations)
-    - [LSTM Time Series Predictor Model](#lstm-time-series-predictor-model)
-    - [Train and Evaluate Helping Functions](#train-and-evaluate-helping-functions)
-    - [1-Layer LSTM model](#1-layer-lstm-model)
-    - [2-Layer LSTM](#2-layer-lstm)
-    - [Bidirectional 1-Layer LSTM](#bidirectional-1-layer-lstm)
-    - [Experimental results on val data](#experimental-results-on-val-data)
+  - [Exploratory Data Analysis (EDA) and Scaling](#exploratory-data-analysis-eda-and-scaling)
+  - [Preparing training dataset/Visualizations](#preparing-training-datasetvisualizations)
+  - [LSTM Time Series Predictor Model](#lstm-time-series-predictor-model)
+  - [Train and Evaluate Helping Functions](#train-and-evaluate-helping-functions)
+  - [1-Layer LSTM model](#1-layer-lstm-model)
+  - [2-Layer LSTM](#2-layer-lstm)
+  - [Bidirectional 1-Layer LSTM](#bidirectional-1-layer-lstm)
+  - [Experimental results on val data](#experimental-results-on-val-data)
 - [Summary](#summary)
 
 <!-- /TOC -->

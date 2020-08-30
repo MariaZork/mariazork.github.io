@@ -16,7 +16,7 @@ In this article, we will consider key concepts of discriminative and generative 
 ![bayes theorem](/assets/img/2020-03-22-discriminative-generative/bayes theorem.jpg)
 <!--more-->
 
-***Discriminative models*** train function ![equation1](/assets/img/2020-03-22-discriminative-generative/equation_imgs/1.png), which map input vector $$\mathbf{x}$$ to some label $$y$$. In probabilistic point of view it means that we learning conditional distribution $$p(y \vert \mathbf{x})$$. And this approach can be represented by the following methods:
+***Discriminative models*** train function $$f:\mathbf{x} \to y$$, which map input vector $$\mathbf{x}$$ to some label $$y$$. In probabilistic point of view it means that we learning conditional distribution $$p(y \vert \mathbf{x})$$. And this approach can be represented by the following methods:
 
 * k-nearest neighbors algorithm;
 * Logistic regression;

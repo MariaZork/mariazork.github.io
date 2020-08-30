@@ -46,7 +46,7 @@ theme_settings:
   # Scripts
   google_analytics: UA-162826684-1 # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname: https-mariazork-github-io
-  katex: true # Enable if using math markup
+  katex: false # Enable if using math markup
   search: false # Enable the search feature
 
   # Localization strings
@@ -74,8 +74,6 @@ paginate_path: "blog/page:num"
 
 # BUILD SETTINGS
 markdown: kramdown
-kramdown:
-  math-engine: katex
 highlighter: rouge
 sass:
   sass_dir: _sass

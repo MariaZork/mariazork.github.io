@@ -16,7 +16,7 @@ In this article, we will consider key concepts of discriminative and generative 
 ![bayes theorem](/assets/img/2020-03-22-discriminative-generative/bayes theorem.jpg)
 <!--more-->
 
-***Discriminative models*** train function ![equation1](/assets/img/2020-03-22-discriminative-generative/equation_imgs/1.png), which map input vector $$\mathbf{x}$$ to some label $$y$$. In probabilistic point of view it means that we learning conditional distribution $$p(y \vert \mathbf{x})$$. And this approach can be represented by the following methods:
+***Discriminative models*** train function $$f:\mathbf{x} \to y$$, which map input vector $$\mathbf{x}$$ to some label $$y$$. In probabilistic point of view it means that we learning conditional distribution $$p(y \vert \mathbf{x})$$. And this approach can be represented by the following methods:
 
 * k-nearest neighbors algorithm;
 * Logistic regression;
@@ -25,13 +25,13 @@ In this article, we will consider key concepts of discriminative and generative 
 * Conditional random fields;
 * Neural networks.
 
-In the case of discriminative approach training dataset look like: $$D=\{(\mathbf{x}^{(i)}; y_i) \vert i < N \isin \Z\}$$, here $$\mathbf{x}^{(i)}$$ is a sample from feature matrix space $$\mathbf{X}$$ and $$y_i$$ is corresponding label from $$\mathbf{Y}$$. As usual in machine learning task, we have to find optimal weights. For discriminative model we try to find maximum likelihood estimation (MLE)
+In the case of discriminative approach training dataset look like: $$D=\{(\mathbf{x}^{(i)}; y_i) \vert i < N \in \mathbb{Z}\}$$, here $$\mathbf{x}^{(i)}$$ is a sample from feature matrix space $$\mathbf{X}$$ and $$y_i$$ is corresponding label from $$\mathbf{Y}$$. As usual in machine learning task, we have to find optimal weights. For discriminative model we try to find maximum likelihood estimation (MLE)
 
-$$\boldsymbol{\hat{\theta}} = \underset{\boldsymbol{\theta}}{\argmax} \, p(\mathbf{Y} \vert \mathbf{X}; \, \boldsymbol{\theta})$$
+$$\boldsymbol{\hat{\theta}} = \underset{\boldsymbol{\theta}}{\operatorname{arg max}} \, p(\mathbf{Y} \vert \mathbf{X}; \, \boldsymbol{\theta})$$
 
 If we assume that all the examples are independent and equally distributed, then this expression can be represented as follows
 
-$$\boldsymbol{\hat{\theta}} = \underset{\boldsymbol{\theta}}{\argmax} \, \sum_{i=1}^N \, \log{p} (y_i \vert \mathbf{x}^{(i)}; \, \boldsymbol{\theta})$$
+$$\boldsymbol{\hat{\theta}} = \underset{\boldsymbol{\theta}}{\operatorname{arg max}} \, \sum_{i=1}^N \, \log{p} (y_i \vert \mathbf{x}^{(i)}; \, \boldsymbol{\theta})$$
 
 *MLE method* helps us to get optimal loss-function expression from different probabilistic distributions. Let's illustrate this fact with an example of binary cross entropy loss-function derivation. For example, we have conducted $$\mathit{N}$$ experiments with a coin, we have tossed a coin $$\mathit{N}$$ times and $$\mathit{n}$$ times we got head. What is the probobility to obtain heads in experiments $$\mathit{p}(heads)$$?<br />
 Here we have a probability space with two possible outcomes: head and tail. After provided experiments there will be finite sequence of independent random variables $$\mathit{X_1}, \dots, \mathit{X_m}$$, for each $$i=1,\dots ,m$$, random variable $$\mathit{X_i}$$ will take the head value with probability $$\mathit{p}$$ and tail value with probability $$1 - \mathit{p}$$. To model probabilities in such kind of tasks Binomial distribution fits well, thus we have,
@@ -43,16 +43,16 @@ $$C_{N}^n = \frac{N!}{n!(N-n)!}$$
 MLE estimation written as follows
 
 $$\begin{array}{cc}
-\underset{\mathit{p}}{\argmax} \, P(n) = \underset{\mathit{p}}{\argmax} \, \log{P(n)}  = \\
-= \underset{\mathit{p}}{\argmax} \, \lbrack \log{C_{N}^n} + n\,\log{p} + (N-n)\log{(1-p)} \rbrack = \\
-= \underset{\mathit{p}}{\argmax} \, \lbrack \displaystyle \frac{n}{N}\log{p} + (1 - \frac{n}{N})\log{(1-p)} \rbrack = \\
-= \underset{\mathit{p}}{\argmax} \, \lbrack \tilde{p}\log{p} + (1 - \tilde{p})\log{(1-p)} \rbrack
+\underset{\mathit{p}}{\operatorname{arg max}} \, P(n) = \underset{\mathit{p}}{\operatorname{arg max}} \, \log{P(n)}  = \\
+= \underset{\mathit{p}}{\operatorname{arg max}} \, \lbrack \log{C_{N}^n} + n\,\log{p} + (N-n)\log{(1-p)} \rbrack = \\
+= \underset{\mathit{p}}{\operatorname{arg max}} \, \lbrack \displaystyle \frac{n}{N}\log{p} + (1 - \frac{n}{N})\log{(1-p)} \rbrack = \\
+= \underset{\mathit{p}}{\operatorname{arg max}} \, \lbrack \tilde{p}\log{p} + (1 - \tilde{p})\log{(1-p)} \rbrack
 \end{array}$$
 
 Here $$\tilde{p}$$ is a target and $$\mathit{p}$$ is a value we want to adjust. Then if we find the partial derivative of $$\mathit{f}$$ with respect to the parameter $$\mathit{p}$$, equate it to zero and solve it with respect to $$\mathit{p}$$, we found out that optimal value which maximize this equation will be $$\mathit{p} = \displaystyle \frac{n}{N}$$.<br/>
 Since usually in machine learning tasks we need to minimize some differentiable function, we rewrite the equation above in the following form
 
-$$\underset{p}{\argmin} \, \lbrack - \tilde{p}\log{p} - (1 - \tilde{p})\log{(1-p)} \rbrack$$
+$$\underset{p}{\operatorname{arg min}} \, \lbrack - \tilde{p}\log{p} - (1 - \tilde{p})\log{(1-p)} \rbrack$$
 
 As a result, in parentheses we can see the familiar binary cross entropy function, which is used in binary classification problem using logistic regression.
 
@@ -66,9 +66,9 @@ As a result, in parentheses we can see the familiar binary cross entropy functio
 * Variational autoencoder;
 * Generative adversarial network.
 
-The main goal of the generative model is as follows: for training dataset $$\mathit{D}=\{\mathbf{x}^{(i)} \vert i < \mathit{N} \isin \Z\}$$ maximize $$\prod_{i=1}^N \, p(\mathbf{x}^{(i)}; \boldsymbol{\theta})$$ over $$\boldsymbol{\theta}$$, so this equivalent to
+The main goal of the generative model is as follows: for training dataset $$\mathit{D}=\{\mathbf{x}^{(i)} \vert i < \mathit{N} \in \mathbb{Z}\}$$ maximize $$\prod_{i=1}^N \, p(\mathbf{x}^{(i)}; \boldsymbol{\theta})$$ over $$\boldsymbol{\theta}$$, so this equivalent to
 
-$$\boldsymbol{\hat{\theta}} = \underset{\boldsymbol{\theta}}{\argmax} \, \sum_{i=1}^N \, \log{p}( \mathbf{x}^{(i)}; \, \boldsymbol{\theta})$$
+$$\boldsymbol{\hat{\theta}} = \underset{\boldsymbol{\theta}}{\operatorname{arg max}} \, \sum_{i=1}^N \, \log{p}( \mathbf{x}^{(i)}; \, \boldsymbol{\theta})$$
 
 One way to interpret MLE estimation is to consider it as minimizing the Kullback–Leibler divergence between the empirical distribution $$p_{data}$$ represented by training set, and distribution $$p$$, which is obtained from our model. The Kullback – Leibler divergence is determined by the formula
 
@@ -83,7 +83,7 @@ where $$y$$ is some label, and $$\mathbf{x}$$ is input sequence. Thus, algorithm
 $$p(y \vert x_1, \dots, x_N) = \frac{p(y) \prod_{i} p(x_i \vert y)}{\sum_{j} p(y_j) \prod_{i} p(x_i \vert y_j)}$$
 
 Among another class of generative models with an *implicit PDF*, differentiable generator nets are widespread, it includes widely used *Generative Adversarial Networks (GAN)* represented by generator and discriminator networks. Differentiable generator networks are used to generate samples directly without any probabilistic assumptions, in the case of GAN we're training neural network to represent a parametric family of nonlinear functions $$g$$ and, using training data, we derive parameters that can help to select the desired function. <br/>
-In other words, some differentiable generator transforms examples of latent variables $$\mathbf{z}$$ into examples $$\mathbf{x}$$ using a differentiable function $$g(\mathbf{z}; \boldsymbol{\theta}^{(g)})$$, which represented by neural network. For example, we take samples from normal distribution with zero mean and  identity covariance matrix $$\mathbf{z} \sim N(0, \mathbf{\Iota})$$ and want to get samples $$\mathbf{x} \sim N(\mu, \mathbf{\Sigma})$$, which is normally distributed with mean $$\mu$$ and covariance matrix $$\mathbf{\Sigma}$$. We can apply to $$\mathbf{z}$$, simple generative network with one affine layer
+In other words, some differentiable generator transforms examples of latent variables $$\mathbf{z}$$ into examples $$\mathbf{x}$$ using a differentiable function $$g(\mathbf{z}; \boldsymbol{\theta}^{(g)})$$, which represented by neural network. For example, we take samples from normal distribution with zero mean and  identity covariance matrix $$\mathbf{z} \sim N(0, \mathbf{I})$$ and want to get samples $$\mathbf{x} \sim N(\mu, \mathbf{\Sigma})$$, which is normally distributed with mean $$\mu$$ and covariance matrix $$\mathbf{\Sigma}$$. We can apply to $$\mathbf{z}$$, simple generative network with one affine layer
 
 $$\mathbf{x} = g(\mathbf{z}) = \mu + \mathbf{L}\mathbf{z}$$
 

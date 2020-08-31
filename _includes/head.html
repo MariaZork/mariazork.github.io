@@ -52,10 +52,23 @@
 	{% else %}
 		<script type="text/x-mathjax-config">
 			MathJax.Hub.Config({
-			tex2jax: {
-			inlineMath: [['$','$'], ['\\(','\\)']],
-			processEscapes: true
-			}
+				jax: ["input/TeX", "output/HTML-CSS"],
+				tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				processEscapes: true
+				},
+
+				"HTML-CSS": {
+					preferredFont: "TeX",
+					styles: {
+						".MathJax_Display": {
+							"overflow-x": "auto",
+							"overflow-y": "hidden",
+							"padding-left": "2px",
+							"padding-right": "2px"
+						  }
+					}
+				  }
 			});
 		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>

@@ -14,7 +14,7 @@ for arg in sys.argv:
 
 c = get_config()
 c.NbConvertApp.export_format = 'markdown'
-c.MarkdownExporter.template_path = ['C://Users//пользователь//Documents//NOTEBOOKS//templates'] # point this to your jekyll template file
+c.MarkdownExporter.template_path = ['C://Users//пользователь//Documents//My-notebooks//templates'] # point this to your jekyll template file
 c.MarkdownExporter.template_file = 'jekyll'
 c.Application.verbose_crash=True
 

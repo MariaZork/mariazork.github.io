@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Time Series Forecasting (Part 1)&#58; 
+title: Time Series Forecasting&#58; 
 subtitle: LSTM-based model for metro traffic prediction (PyTorch)
 author: Maria Zorkaltseva
 categories: [Deep Learning]
@@ -20,14 +20,14 @@ This tutorial contains brief overview of statistical and machine learning method
 - [Time series forecasting methods overview](#time-series-forecasting-methods-overview)
 - [Dataset](#dataset)
 - [Metro Traffic Prediction using LSTM-based recurrent neural network](#metro-traffic-prediction-using-lstm-based-recurrent-neural-network)
-    - [Exploratory Data Analysis (EDA) and Scaling](#exploratory-data-analysis-eda-and-scaling)
-    - [Preparing training dataset/Visualizations](#preparing-training-datasetvisualizations)
-    - [LSTM Time Series Predictor Model](#lstm-time-series-predictor-model)
-    - [Train and Evaluate Helping Functions](#train-and-evaluate-helping-functions)
-    - [1-Layer LSTM model](#1-layer-lstm-model)
-    - [2-Layer LSTM](#2-layer-lstm)
-    - [Bidirectional 1-Layer LSTM](#bidirectional-1-layer-lstm)
-    - [Experimental results on val data](#experimental-results-on-val-data)
+  - [Exploratory Data Analysis (EDA) and Scaling](#exploratory-data-analysis-eda-and-scaling)
+  - [Preparing training dataset/Visualizations](#preparing-training-datasetvisualizations)
+  - [LSTM Time Series Predictor Model](#lstm-time-series-predictor-model)
+  - [Train and Evaluate Helping Functions](#train-and-evaluate-helping-functions)
+  - [1-Layer LSTM model](#1-layer-lstm-model)
+  - [2-Layer LSTM](#2-layer-lstm)
+  - [Bidirectional 1-Layer LSTM](#bidirectional-1-layer-lstm)
+  - [Experimental results on val data](#experimental-results-on-val-data)
 - [Summary](#summary)
 
 <!-- /TOC -->

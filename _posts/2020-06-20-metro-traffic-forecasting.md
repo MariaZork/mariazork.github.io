@@ -83,7 +83,7 @@ Our target variable will be **traffic_volume**. Here we will consider multivaria
 
 ### Metro Traffic Prediction using LSTM-based recurrent neural network
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MariaZork/time-series-forecasting-tutorials/blob/master/time-series-forecasting-part1-LSTM.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MariaZork/my-machine-learning-tutorials/blob/master/time-series-forecasting-part1-LSTM.ipynb)
 
 I used Google Colab Notebooks to calculate experiments. Here, for convinience, I
 mounted my Google drive where I stored the files.

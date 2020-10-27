@@ -57,6 +57,8 @@ All images are RGB, 0.495 µm per pixel, digitized with an Aperio ScanScope (Ape
 
 ### Colorectal MNIST images classification with ResNet
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MariaZork/my-machine-learning-tutorials/blob/master/colorectal-cancer-classification.ipynb)
+
 Import necessary libraries and listing input directory with the data to observe folders structure and stored files. To run kernel I used kaggle notebooks, where you can directly import appropriate data without downloading.
 
 **In [1]:**

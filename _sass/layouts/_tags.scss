@@ -1,11 +1,34 @@
-.tag-title {
-    color: $tags-color;
+.tags-banner {
+    @extend %padding-small;
+    display: inline-block;
+    width: 100%;
+    background-color: $header-desc-background-color;
+    background-size: auto;
+    font-family: $font-family-headings;
+    text-align: center;
+    color: $header-desc-text-color;
     margin-bottom: 0;
+    vertical-align: middle;
 }
 
-.tagged-post {
-    .title {
-        margin-top: 0;
+.tags-content {
+    @extend %padding-small;
+
+    text-align: justify;        
+
+    align-content: center;
+
+    .tag-title {
+        color: $tags-color;
         margin-bottom: 0;
     }
+    
+    .tagged-post {
+        .title {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
 }
+
+

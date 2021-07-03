@@ -7,12 +7,13 @@
 @import 'base/global';
 @import 'base/utility';
 
-// Posts
+// Layouts
 @import 'layouts/posts';
 @import 'layouts/index';
 @import 'layouts/tags';
 @import 'layouts/search';
 @import 'layouts/about';
+@import 'layouts/categories';
 
 // Partials
 @import 'includes/header';

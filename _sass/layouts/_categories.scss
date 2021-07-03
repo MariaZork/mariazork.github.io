@@ -1,0 +1,40 @@
+.categories-banner {
+    @extend %padding-small;
+    display: inline-block;
+    width: 100%;
+    background-color: $header-desc-background-color;
+    background-size: auto;
+    font-family: $font-family-headings;
+    text-align: center;
+    color: $header-desc-text-color;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.categories-content {
+    @extend %padding-small;
+
+    text-align: justify;
+
+    a {
+        color: rgb(46, 33, 33);
+    }
+
+    .category-name {
+        color: $categories-color;
+        font-size: larger;
+
+    }
+
+    .post-link {
+        font-size: x-large;
+    }
+
+    .date {
+        color: $categories-color;
+        font-size: medium;     
+    }
+
+    align-content: center;
+}
+

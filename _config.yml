@@ -18,7 +18,9 @@ theme_settings:
   header_text: <p>Computer vision and Natural Language Processing specialist</p>
   header_text_feature_image:
   footer_text: >
-   Powered by <a href="https://jekyllrb.com/">Jekyll</a>
+   Powered by <a href="https://jekyllrb.com/">Jekyll</a><br>
+   Copyright: Built by <a href="http://github.com/mariazork">Maria Zorkaltseva</a> &copy; 2020
+
   # Icons
   rss: false
   email_address: maria.zorkaltseva@gmail.com # Full email address, e.g. "sam@example.com"

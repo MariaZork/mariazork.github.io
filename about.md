@@ -5,6 +5,7 @@ permalink: /about/
 feature-img: "assets/img/sample_feature_img_2.png"
 photo: "assets/img/my_photo.jpg"
 tags: ["maria zorkaltseva", "мария зоркальцева"]
+sitemap: true
 ---
 
 I’m proficient in such machine learning and deep learning areas as computer vision, natural language processing, predictive analytics. Also I have more than seven years of experience in science and strong background as a researcher. I have 19 publications in well-known foreign and Russian magazines. My main programming language is Python (with additional libraries such as numpy, scipy, matplotlib, pandas, scikit-learn), also I’m using Keras and PyTorch for deep learning. Due to mathematical education, I have background in pure mathematics and statistics.

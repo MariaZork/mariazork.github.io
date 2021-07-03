@@ -1,0 +1,26 @@
+.categories-banner {
+    @extend %padding-small;
+    display: inline-block;
+    width: 100%;
+    background-color: $header-desc-background-color;
+    background-size: auto;
+    font-family: $font-family-headings;
+    text-align: center;
+    color: $header-desc-text-color;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.site-categories-header {
+
+}
+
+.site-categories-list {
+
+}
+
+.site-category-name {
+    @extend %font-family-main;
+    font-size: medium;
+    color: cyan;
+}

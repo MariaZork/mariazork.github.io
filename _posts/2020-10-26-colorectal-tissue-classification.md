@@ -18,6 +18,8 @@ comments: true
 
 <!--excerpt-->
 In this tutorial we will consider colorectal histology tissues classification using ResNet architecture and Pytorch framework.
+
+![histopathology-ai](/assets/img/2020-10-26-colorectal-tissue-classification/digital-pathology-ai.jpg)
 <!--more-->
 
 <!-- TOC -->
@@ -25,12 +27,12 @@ In this tutorial we will consider colorectal histology tissues classification us
 - [Introduction](#introduction)
 - [Dataset](#dataset)
 - [Colorectal MNIST images classification with ResNet](#colorectal-mnist-images-classification-with-resnet)
-  - [Helpers](#helpers)
-  - [Data exploration](#data-exploration)
-  - [PyTorch Dataset, Dataloaders and Transforms preparation](#pytorch-dataset-dataloaders-and-transforms-preparation)
-  - [Train loop](#train-loop)
-  - [Model setup and training](#model-setup-and-training)
-  - [Validation and test results](#validation-and-test-results)
+    - [Helpers](#helpers)
+    - [Data exploration](#data-exploration)
+    - [PyTorch Dataset, Dataloaders and Transforms preparation](#pytorch-dataset-dataloaders-and-transforms-preparation)
+    - [Train loop](#train-loop)
+    - [Model setup and training](#model-setup-and-training)
+    - [Validation and test results](#validation-and-test-results)
 - [Conclusion](#conclusion)
 
 <!-- /TOC -->

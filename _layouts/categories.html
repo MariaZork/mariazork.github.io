@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<section class="categories-banner">
+
+    <header>
+      <h1 class="title">{{ page.feature-title | default: page.title }}</h1>
+      {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{% endif %}
+    </header>
+
+</section>
+
+<!-- <div>
+    {% assign categories = site.categories | sort %}
+    {% for category in categories %}
+        <span class="site-categories-header">
+            <a href="#{{ category | first | slugify }}">
+                    {{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})
+            </a>
+        </span>
+    {% endfor %}
+</div> -->
+
+
+<section class="categories-content">
+    <div id="site-categories-list">
+        {% for category in categories %}
+            <a class="site-category-name" name="{{ category[0] }}"></a>
+            <h2>{{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})</h2>
+            {% assign sorted_posts = site.posts | sort: 'title' %}
+            {% for post in sorted_posts %}
+                {%if post.categories contains category[0]%}
+                    <h3><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title }} {{ post.subtitle }}">{{ post.title }} {{ post.subtitle }}
+                        <p class="date">{{ post.date |  date: "%B %e, %Y" }}</p></a></h3>
+                    <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+                {%endif%}
+            {% endfor %}
+        {% endfor %}
+    </div>
+</section>
+
+
+

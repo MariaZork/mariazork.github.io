@@ -155,7 +155,7 @@ files.upload()
 
 Copy API command from here and paste it in the cell below:
 
-![kaggle](/assets/img/2021-07-29-phishing-url-detection/kaggle1.png)
+![kaggle](/assets/img/2021-07-29-phishing-url-detection/kaggle1.PNG)
 
 <b style="font-size: 0.8em">In [4]:</b>
 
@@ -353,7 +353,7 @@ ax = sns.catplot("Label",
 
 Here is the general structure of any URL, you can simply write regex expression to extract interesting parts of the URL like I did below. Function **url_path_to_dict** extracts protocol, username, password, hostname, port, path and query. These features we will use for our linguistic patterns.
 
-![phishing url detection](/assets/img/2021-07-29-phishing-url-detection/phising-url.png)
+![phishing url detection](/assets/img/2021-07-29-phishing-url-detection/phising-url.PNG)
 
 <b style="font-size: 0.8em">In [14]:</b>
 

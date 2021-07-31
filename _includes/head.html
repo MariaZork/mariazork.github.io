@@ -1,4 +1,12 @@
 <head>
+	<!-- preview site in social media -->
+	<meta name="author" content="Maria Zorkaltseva" />
+	<meta property="og:image" content="https://www.mcgilltribune.com/wp-content/uploads/2020/11/Forbes-Getty-Images.jpg" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="{{site.title}}" />
+	<meta name="twitter:image" content="https://www.mcgilltribune.com/wp-content/uploads/2020/11/Forbes-Getty-Images.jpg" />
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	{% if site.theme_settings.google_analytics %}
 		<script async src="https://www.googletagmanager.com/gtag/js?id='{{ site.theme_settings.google_analytics }}'"></script>
@@ -76,7 +84,7 @@
 
 
 	<!-- RSS feed -->
-	<!-- {% feed_meta %} -->
+	{% feed_meta %}
 
 	<!-- SEO -->
 	{% seo %}

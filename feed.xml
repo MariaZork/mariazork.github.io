@@ -6,15 +6,23 @@ layout: null
   <channel>
     <title>{{ site.theme_settings.title | xml_escape }}</title>
     <atom:link href="{{ "/feed.xml" | relative_url }}" rel="self" type="application/rss+xml"/>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <link>{{ site.url | relative}}{{ site.baseurl | relative}}/</link>
     <description>{{ site.theme_settings.description | xml_escape }}</description>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     {% for post in site.posts limit:15 %}
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <link>{{ post.url | relative_url }}</link>
+        <title>{{ post.title | xml_escape }} {{ post.subtitle | xml_escape}}</title>
+        <link>{{ site.url | relative}}{{ site.baseurl | relative}}{{ post.url | relative_url }}</link>
         <guid isPermaLink="true">{{ post.url | relative_url }}</guid>
-        <description>{{ post.content | xml_escape }}</description>
+        {% if post.category %}
+          {% assign category = post.category | capitalize %}
+          {% assign title = title | append: " | " | append: category %}
+        {% endif %}
+        {% if post.excerpt and post.excerpt != empty %} 
+          <summary type="html">{{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}</summary> 
+        {% else %}
+          <description>{{ post.content | xml_escape }}</description>
+        {% endif %} 
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       </item>
     {% endfor %}

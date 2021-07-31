@@ -22,8 +22,6 @@ theme_settings:
    Copyright: Built by <a href="http://github.com/mariazork">Maria Zorkaltseva</a> &copy; 2020
 
   # Icons
-  rss: false
-  email_address: maria.zorkaltseva@gmail.com # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket:
   dribbble:
@@ -44,7 +42,9 @@ theme_settings:
   twitter: MZorkaltseva
   wordpress:
   youtube:
-
+  email_address: maria.zorkaltseva@gmail.com
+  rss: true
+  
   # Scripts
   google_analytics: UA-162826684-1 # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname: https-mariazork-github-io
@@ -80,7 +80,11 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-plugins: [jekyll-paginate, 'jekyll-seo-tag', 'jekyll-feed', jekyll-sitemap]
+plugins: 
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
 exclude:
   - .sass-cache/
   - .jekyll-cache/

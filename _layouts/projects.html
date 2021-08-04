@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+
+<section class="projects-banner">
+  <header>
+    <h1>{{ page.feature-title | default: page.title }}</h1>
+  </header>
+</section>
+
+
+<section class="projects-content">
+
+  <h2>Kaggle projects (notebooks)</h2>
+
+  <div class="project-teaser">
+      <p class="thick">Computer vision: semantic segmentation</p>
+      
+      <div class="project-image"><img src= "/assets/img/kaggle-projects/hubmap.png", alt="kaggle hubmap"></div>
+
+      <a class="post-link" href="https://www.kaggle.com/mariazorkaltseva/hubmap-train-test-patches-generation" target="_blank">
+        <p>Images tiles generator from WSI</p>
+      </a>
+
+      <a class="post-link" href="https://www.kaggle.com/mariazorkaltseva/hubmap-seresnext50-unet-dice-loss" target="_blank">
+        <p>UNET model with SeResNext-50_32x4d encoder for semantic segmentation of Glomeruli areas in kidney tissues</p>
+      </a>
+  </div>
+
+  <div class="project-teaser">
+    <p class="thick">Computer vision: object detection</p>
+    
+    <div class="project-image"><img src= "/assets/img/kaggle-projects/vinbigdata.png", alt="kaggle vinbigdata"></div>
+
+    <a class="post-link" href="https://www.kaggle.com/mariazorkaltseva/vinbigdata-eda-faster-rcnn-icevision-training" target="_blank">
+      <p>Faster-RCNN for lungs anomalities detection</p>
+    </a>
+  </div>
+
+</section>
+

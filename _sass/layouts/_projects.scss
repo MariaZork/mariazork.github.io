@@ -1,0 +1,36 @@
+.projects-banner {
+    @extend %padding-small;
+    display: inline-block;
+    width: 100%;
+    background-color: $header-desc-background-color;
+    background-size: auto;
+    font-family: $font-family-headings;
+    text-align: center;
+    color: $header-desc-text-color;
+    margin-bottom: 0;
+    margin-top: 0%;
+    vertical-align: middle;
+}
+
+.projects-content{
+    @extend %padding-regular;
+    padding-top: 0%;
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.project-teaser {
+    padding: 20px;
+}
+
+.p {
+    text-align: left;
+    padding-bottom: 20%;
+}
+
+p.thick {
+    font-weight: 900;
+    text-align: center;
+}

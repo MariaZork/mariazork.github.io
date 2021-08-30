@@ -12,6 +12,9 @@ I’m proficient in such machine learning and deep learning areas as computer vi
 
 ### Certifications
 
+- [Data Engineering with Google Cloud](https://www.coursera.org/account/accomplishments/specialization/certificate/79LHSJH25Z74)
+    >*Coursera*, *Google*, *2020*<br />
+    This specialization contains 6 courses and helps you to get familiar with GCP services for data engineering and machine learning. This specialization include following courses: Google Cloud Big Data and Machine Learning Fundamentals, Modernizing Data Lakes and Data Warehouses with GCP, Building Batch Data Pipelines on GCP, Building Resilient Streaming Analytics Systems on GCP, Smart Analytics, Machine Learning, and AI on GCP, Preparing for the Google Cloud Professional Data Engineer Exam.
 - [Specialization IBM AI Engineering](https://www.coursera.org/account/accomplishments/specialization/XS3WVRQXBC4Z)
     >*Coursera*, *IBM*, *2020*<br />
     This specialization contains 6 courses such as: Machine Learning with Python, Scalable Machine Learning on Big Data using Apache Spark, Introduction to Deep Learning &

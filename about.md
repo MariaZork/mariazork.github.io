@@ -8,7 +8,24 @@ tags: ["maria zorkaltseva", "мария зоркальцева"]
 sitemap: true
 ---
 
-I’m proficient in such machine learning and deep learning areas as computer vision, natural language processing, predictive analytics. Also I have more than seven years of experience in science and strong background as a researcher. I have 19 publications in well-known foreign and Russian magazines. My main programming language is Python (with additional libraries such as numpy, scipy, matplotlib, pandas, scikit-learn), also I’m using Keras and PyTorch for deep learning. Due to mathematical education, I have background in pure mathematics and statistics.
+I’m proficient in such machine learning and deep learning areas as computer vision, natural language processing, predictive analytics. Also I have more than seven years of experience in science and strong background as a researcher. I have 19 publications in well-known magazines. My main programming language is Python (with additional libraries such as numpy, scipy, matplotlib, pandas, scikit-learn), also I’m using Keras and PyTorch for deep learning. Due to mathematical education, I have background in pure mathematics and statistics.
+
+### My Interests:<br />
+
+AI in cyber security, AI in healthcare, computer vision, MLOps, start-ups
+
+### Top Publications:<br />
+
+Here represented some of my scientific papers:<br />
+
+- [Radiation of high-power ultrawideband pulses with elliptical polarization by fourelement
+array of cylindrical helical antennas](/assets/pdf/laser&particle.pdf), *2018*, *Laser and Particle Beams*<br />
+- [Numerical Modeling of Ultra Wideband Combined Antennas](/assets/pdf/numerical_modeling.pdf), *2017*, *Russian Physics Journal*<br />
+- [A source of high-power pulses of elliptically polarized ultrawideband radiation](/assets/pdf/rsi.pdf), *2014*, *Review of Scientific Instruments*<br />
+
+Other papers accessible via [Google Scholar profile](https://scholar.google.com/citations?user=kJHS8ygAAAAJ&hl=ru&authuser=1)
+
+Also I have a [Medium Blog](https://medium.com/@maria.zorkaltseva), where I'm writing about different machine learning applications
 
 ### Certifications
 
@@ -33,12 +50,3 @@ I’m proficient in such machine learning and deep learning areas as computer vi
     >*Coursera*, *Stanford University*, *2017*<br />
     This course is must have for every beginner machine learner engineer, which includes all standard
  machine learning methods, feed forward networks, recomendation systems, anomality detection.<br />
-
-### Publications:<br />
-
-Here represented some of my scientific papers:<br />
-
-- [Radiation of high-power ultrawideband pulses with elliptical polarization by fourelement
-array of cylindrical helical antennas](/assets/pdf/laser&particle.pdf), *2018*, *Laser and Particle Beams*<br />
-- [Numerical Modeling of Ultra Wideband Combined Antennas](/assets/pdf/numerical_modeling.pdf), *2017*, *Russian Physics Journal*<br />
-- [A source of high-power pulses of elliptically polarized ultrawideband radiation](/assets/pdf/rsi.pdf), *2014*, *Review of Scientific Instruments*<br />

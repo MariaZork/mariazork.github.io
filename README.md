@@ -51,3 +51,11 @@ If you're using Docker Toolbox on Windows, try accessing "http://192.168.99.100:
 ```sh
 jupyter nbconvert --to markdown <notebook_filename>.ipynb --config ../jekyll.py
 ```
+
+## Convert Medium articles to Markdown
+
+[Source code and description](https://github.com/Donohue/medium-to-jekyll)
+
+```sh
+python medium_to_jekyll.py <path-to-Medium-posts-directory> <path-to-Jekyll-root-directory>
+```

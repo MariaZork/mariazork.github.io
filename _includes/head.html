@@ -1,16 +1,17 @@
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	{% if site.theme_settings.google_analytics %}
-		<script async src="https://www.googletagmanager.com/gtag/js?id='{{ site.theme_settings.google_analytics }}'"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+	<script async
+		src="https://www.googletagmanager.com/gtag/js?id='{{ site.theme_settings.google_analytics }}'"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-			gtag('config', '{{ site.theme_settings.google_analytics }}');
-		</script>
+		gtag('config', '{{ site.theme_settings.google_analytics }}');
+	</script>
 	{% endif %}
-	
+
 	<meta charset="utf-8">
 	<title>{% if page.title %}{{ page.title }} |{% endif %} {{ site.theme_settings.title }}</title>
 	<meta name="description"
@@ -19,7 +20,7 @@
 	<meta name="google-site-verification" content="rR6u3_F_3kumkv-eeAB5quPONblImhBm1P3vUOfaJoM" />
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+	<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
 	<!--Favicon-->
 	<link rel="shortcut icon" href="{{ site.baseurl }}/{{ site.theme_settings.favicon }}" type="image/x-icon">
@@ -29,7 +30,7 @@
 
 	<!-- RSS -->
 	<link rel="alternate" type="application/atom+xml" title="{{ site.theme_settings.title }}"
-		href="{{ "/feed.xml" | relative_url }}" />
+		href="{{ '/feed.xml' | relative_url }}" />
 
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -50,7 +51,7 @@
 		integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ"
 		crossorigin="anonymous"></script>
 	{% else %}
-		<script type="text/x-mathjax-config">
+	<script type="text/x-mathjax-config">
 			MathJax.Hub.Config({
 				jax: ["input/TeX", "output/HTML-CSS"],
 				tex2jax: {
@@ -71,7 +72,8 @@
 				  }
 			});
 		</script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+		type="text/javascript"></script>
 	{% endif %}
 
 
@@ -86,10 +88,10 @@
 	{% if site.theme_settings.google_analytics %}
 	<script>
 		(function (i, s, o, g, r, a, m) {
-		i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-			(i[r].q = i[r].q || []).push(arguments)
-		}, i[r].l = 1 * new Date(); a = s.createElement(o),
-			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
 		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
 		ga('create', '{{ site.theme_settings.google_analytics }}', 'auto');

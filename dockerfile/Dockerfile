@@ -1,4 +1,4 @@
-FROM jekyll/jekyll:4
+FROM jekyll/jekyll:builder
 
 RUN mkdir /src
 RUN cd /src

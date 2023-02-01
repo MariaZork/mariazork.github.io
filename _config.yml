@@ -91,6 +91,9 @@ exclude:
   - gemfiles/
   - Gemfile
   - Gemfile.lock
+  - requirements.txt
+  - jekyll.py
+  - medium_to_jekyll.py
 defaults:
   - scope:
       path: "assets/img"

@@ -5,6 +5,8 @@ author: Maria Zorkaltseva
 categories: [Machine learning, Cybersecurity]
 tags: 
     - machine learning
+    - fraud
+    - adversarial attacks
 feature-img: "assets/img/sample_feature_img.png"
 excerpt_begin_separator: <!--excerpt-->
 excerpt_separator: <!--more-->
@@ -12,10 +14,12 @@ comments: true
 date:	2022-06-20
 ---
 
+<!--excerpt-->
+
+  According to [Open Web Application Security Project (OWASP)](https://owasp.org/) ratings of top cybersecurity risks, among which [web application risks](https://owasp.org/www-project-top-ten/), [mobile](https://owasp.org/www-project-mobile-top-10/) and [IoT devices risks](https://owasp.org/www-project-internet-of-things/), [machine learning systems](https://owasp.org/www-project-machine-learning-security-top-10/) vulnerabilities, the problem of protection in the digital space continues to be extremely relevant. Here we will consider actual challenges which are arising from the conjunction of machine learning and cybersecurity applications in different areas such as IoT ecosystems, targeted advanced persistent threats, fraud and anomalies detection, etc. Also, you will find interesting ideas for your future machine learning projects.
+  
 ![](/assets/img/2022-06-20-top-machine-learning-in-cybersecurity/0*bVhDjwB4IAuCGp_1)
 
-<!--excerpt-->
-  According to [Open Web Application Security Project (OWASP)](https://owasp.org/) ratings of top cybersecurity risks, among which [web application risks](https://owasp.org/www-project-top-ten/), [mobile](https://owasp.org/www-project-mobile-top-10/) and [IoT devices risks](https://owasp.org/www-project-internet-of-things/), [machine learning systems](https://owasp.org/www-project-machine-learning-security-top-10/) vulnerabilities, the problem of protection in the digital space continues to be extremely relevant. Here we will consider actual challenges which are arising from the conjunction of machine learning and cybersecurity applications in different areas such as IoT ecosystems, targeted advanced persistent threats, fraud and anomalies detection, etc. Also, you will find interesting ideas for your future machine learning projects.
 <!--more-->
 
 ### Internet of Things (IoT) systems

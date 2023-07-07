@@ -105,6 +105,16 @@
 		ga('create', '{{ site.theme_settings.google_analytics }}', 'auto');
 		ga('send', 'pageview');
 	</script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-S04H912ZWJ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-S04H912ZWJ');
+	</script>
 	{% endif %}
 	<!-- {% endif %} -->
 </head>

@@ -7,6 +7,10 @@
 	<meta name="twitter:title" content="{{site.title}}" />
 	<meta name="twitter:image" content="https://www.mcgilltribune.com/wp-content/uploads/2020/11/Forbes-Getty-Images.jpg" />
 
+	<!-- Google AdSense -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5520389121387465"
+		crossorigin="anonymous"></script>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	{% if site.theme_settings.google_analytics %}
 	<script async
@@ -15,7 +19,6 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
-
 		gtag('config', '{{ site.theme_settings.google_analytics }}');
 	</script>
 	{% endif %}

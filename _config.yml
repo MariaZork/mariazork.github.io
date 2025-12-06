@@ -3,6 +3,15 @@ baseurl: ""
 url: "https://mariazork.github.io/"
 author: Maria Zorkaltseva
 
+# Google AdSense
+adsense:
+  enabled: true
+  client_id: "ca-pub-5520389121387465"
+  slots:
+    in_article: "1234567890"
+    display: "9876543210"
+    sidebar: "1122334455"
+
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
@@ -44,7 +53,7 @@ theme_settings:
   youtube:
   email_address: maria.zorkaltseva@gmail.com
   rss: true
-  
+
   # Scripts
   google_analytics: UA-162826684-1 # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname: https-mariazork-github-io
@@ -80,7 +89,7 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-plugins: 
+plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-feed

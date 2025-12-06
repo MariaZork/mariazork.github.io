@@ -1,3 +1,43 @@
+// AdSense Container Styles
+.adsense-container {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 1em;
+    margin: 2em auto;
+    max-width: 728px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        max-width: 100%;
+        padding: 0.5em;
+        margin: 1.5em auto;
+    }
+
+    // Responsive ad adjustments
+    ins.adsbygoogle {
+        display: block;
+        min-height: 90px;
+
+        @media (max-width: 768px) {
+            min-height: 50px;
+        }
+    }
+}
+
+.adsense-sidebar {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 1em;
+    margin: 1em 0;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        display: none; // Hide sidebar ads on mobile
+    }
+}
+
 .post-content {
     @extend %padding-regular;
     font-size: 1.1em;
@@ -43,7 +83,7 @@ article,
 
 article {
     .title {
-        margin-bottom: 0.5em     
+        margin-bottom: 0.5em
     }
     .subtitle {
         font-weight: bold;

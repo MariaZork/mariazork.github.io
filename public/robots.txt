@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mariazork.github.io
+
+# Sitemaps
+Sitemap: https://mariazork.github.io/sitemap.xml

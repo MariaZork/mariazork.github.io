@@ -1,0 +1,21 @@
+.katex-display {
+  margin: 2.5rem 0 !important;
+  font-size: 1.6rem !important;
+  line-height: 1.7 !important;
+  text-align: center !important;
+}
+
+.prose .katex-display {
+  margin: 2.5rem 0 !important;
+  font-size: 1.6rem !important;
+}
+
+.katex {
+  font-size: 1.25rem !important;
+}
+
+.katex-display {
+  padding: 0.5rem 0;
+  border-left: 3px solid #e5e7eb;
+  padding-left: 1rem;
+}

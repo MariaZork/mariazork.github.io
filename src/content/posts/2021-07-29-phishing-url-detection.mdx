@@ -1,0 +1,137 @@
+---
+layout: post
+title: "Phishing URL Detection using Standard Machine Learning Methods"
+subtitle: ""
+author: Maria Zorkaltseva
+date: 2021-07-29
+categories: [Machine learning]
+tags:
+  - machine learning
+  - auto ml
+excerpt: "Phishing is a fraudulent activity that aims to steal user credentials, credit card and bank account information or to deploy malicious software on the victim's infrastructure. Here we discuss URL-based detection using standard ML approaches in combination with NLP features extracted from the URL."
+image: /images/2021-07-29-phishing-url-detection/intro-picture.jpg
+published: true
+---
+
+Phishing is a fraudulent activity that aims to steal user credentials, credit card and bank account information or to deploy malicious software on the victim's infrastructure. For instance, fraudsters can massively send letters containing malicious links, by clicking on which the user allows the attacker to get sensitive data.
+
+There are various phishing URL detection techniques: white/black lists usage, heuristics-oriented approaches such as usage of content, visual and URL features. Here we will discuss URL-based method using standard machine learning approaches (Logistic regression, Random forest, SGD classifier and etc.) in combination with NLP-driven features which can be extracted from the URL.
+
+## Introduction
+
+Machine learning is now widely used in different cybersecurity areas. Among them are the following:
+
+- Malware detection and classification
+- Domain generation algorithms and botnet detection
+- Network intrusion detection
+- URL detection
+- Spam filtering
+- Malicious insiders threats
+- Cyber-physical systems (CPS) and industrial control systems (ICS)
+- Biometric systems (face recognition, speaker verification/recognition, fingerprint systems)
+- Anomalous user behaviour analysis
+
+In this tutorial we will consider only one of these numerous cases and will give some insights into how, by combining NLP features and standard (non-deep learning) machine learning algorithms, we can perform the detection of phishing URLs.
+
+**There are different types of URL obfuscation:**
+
+| Type | Sample |
+|:---|:---|
+| Obfuscation with other domains | `http://school497.ru/222/www.paypal.com/...` |
+| Typo-squatting domains | `http://cgi-3.paypal-secure.de/...` |
+| Obfuscation with IP address | `http://69.72.130.98/javaseva/https://paypal.com/...` |
+| Obfuscation with URL shorteners | `http://goo.gl/HQx5g` |
+
+## Dataset
+
+In this tutorial I used the **Kaggle** dataset ["Phishing Site URLs"](https://www.kaggle.com/taruntiwarihp/phishing-site-urls) which contains 549,346 entries of URLs labeled with 2 categories ("Good", "Bad").
+
+## Measuring ML Model Performance
+
+Important metrics for measuring the quality of cybersecurity ML models are **precision** and **recall**:
+
+$$Precision = \frac{TP}{TP + FP}$$
+
+$$Recall = \frac{TP}{TP + FN}$$
+
+In cyber security, **recall** is critical because it determines the rate of malicious samples we pass as legitimate, so FN should be as low as possible. **Precision** acts like the friction rate for legitimate users. There should always be an optimal trade-off between recall and precision.
+
+## Feature Engineering
+
+Here is the general structure of any URL — protocol, username, hostname, port, path and query:
+
+```
+https://user:password@hostname.com:443/path?query
+```
+
+The following helper functions extract NLP features from the URL:
+
+```python
+import re
+import string
+import math
+from collections import Counter
+
+VOWELS = set("aeiou")
+CONSONANTS = set(string.ascii_lowercase) - VOWELS
+
+def url_length(s: str):
+    return len(s)
+
+def vowels_pct(s):
+    count = sum(1 for ch in s.lower() if ch in VOWELS)
+    return count / len(s)
+
+def count_dots(s):
+    return s.count('.')
+
+def count_slash(s):
+    return s.count('/')
+
+def count_digits(s):
+    return len(re.sub(r"\D", "", s))
+
+def extract_doc(s):
+    """Split URL by punctuation and join with spaces for TF-IDF"""
+    return " ".join(re.split("[" + string.punctuation + "]+", s))
+```
+
+After feature extraction, we apply TF-IDF on the `doc` field and combine with numeric features:
+
+```python
+from scipy.sparse import coo_matrix, hstack
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.preprocessing import RobustScaler
+
+tf_idf_vec = TfidfVectorizer(
+    encoding='utf-8',
+    stop_words='english',
+    ngram_range=(1, 3),
+    max_df=0.8,
+    min_df=1000
+)
+sc = RobustScaler()
+```
+
+## Results
+
+| Algorithm | Mean Precision (5-fold) | Mean Recall (5-fold) |
+|:---:|:---:|:---:|
+| Logistic Regression | 0.94 | 0.91 |
+| SGD Classifier | 0.94 | 0.93 |
+| **Random Forest** | **0.96** | **0.98** |
+| Linear SVM | 0.95 | 0.92 |
+
+Random Forest showed the best performance with mean recall of **0.982** over 5 folds and no misclassifications on the manually selected test samples.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MariaZork/my-machine-learning-tutorials/blob/master/phishing_url_detection.ipynb)
+
+## Conclusion
+
+URL-based phishing detection using NLP features combined with standard ML classifiers achieves strong performance. The Random Forest classifier is the clear winner here — its ensemble nature handles the high-dimensional TF-IDF feature space well and its recall is the most critical metric for security applications.
+
+Key takeaways:
+- TF-IDF on tokenized URL text is a powerful and simple feature
+- Structural URL features (dots, slashes, IP presence, port) add important signal
+- Random Forest dominates; Logistic Regression is competitive but lower recall
+- Class imbalance should be handled explicitly via `class_weight='balanced'`

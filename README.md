@@ -1,61 +1,37 @@
-## Running Jekyll in Docker
+# 🚀 Maria Zorkaltseva - ML & AI Blog
 
-The initial step is to build your Docker image with Jekyll environment:
+This repository contains my personal blog focused on **machine learning, AI systems, MLOps, and real-world engineering problems**.
 
-```sh
-docker build --no-cache -f dockerfile/Dockerfile -t jekyll_env .
+👉 Live: https://mariazork.github.io
+
+---
+
+## ⚙️ Tech Stack
+
+- Next.js 14
+- MDX (blog content)
+- Tailwind CSS
+- Custom React Components
+
+---
+
+## 🧪 Local Development
+
+Run the development server:
+
+```bash
+npm install
+npm run dev
 ```
 
-Then run it with port and directory mapping options:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
- ```sh
-docker run --rm -ti -p 8080:4000 -v $PWD:/src/ jekyll_env  bash
+## 🏗 Build
+
+To build the project:
+
+```
+npm run build
 ```
 
-To install necessary packages:
-
-```sh
-bundler install
-```
-
-To serve your site just type following command in docker container bash command line:
-
-```sh
-bundler exec jekyll serve --host 0.0.0.0
-jekyll serve
-```
-
-To serve your site with drafts:
-
-```sh
-jekyll serve --drafts
-```
-
-Serve the site and auto-regenerating on changes
-
-```sh
-jekyll serve --livereload
-```
-
-To access your site use following links: "http://localhost:8080" or "http://127.0.0.1:8080"
-
-If you're using Docker Toolbox on Windows, try accessing "http://192.168.99.100:8080" instead.
-
-## Convert Jupyter Notebook to Markdown
-
-1. download the following GitHub gists jekyll.py and jekyll.tpl;
-2. copy jekyll.py into root project directory and copy jekyll.tpl to any directory;
-3. change pathes in jekyll.py file;
-4. then type the following command into terminal:
-
-```sh
-jupyter nbconvert --to markdown <notebook_filename>.ipynb --config ../jekyll.py
-```
-
-## Convert Medium articles to Markdown
-
-[Source code and description](https://github.com/Donohue/medium-to-jekyll)
-
-```sh
-python medium_to_jekyll.py <path-to-Medium-posts-directory> <path-to-Jekyll-root-directory>
-```
+This generates a static site in in /out.

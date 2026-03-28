@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --color-ink: #1a1a2e;
+  --color-ink-muted: #4a4a6a;
+  --color-surface: #fafaf8;
+  --color-surface-alt: #f2f2ee;
+  --color-border: #e4e4de;
+  --color-accent: #1ABC9C;
+  --color-accent-dark: #0e9d84;
+  --color-accent-soft: #e6f9f5;
+  --color-secondary: #6b5ce7;
+  --color-secondary-soft: #f0eeff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: var(--color-ink);
+    background-color: var(--color-surface);
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    line-height: 1.2;
+    color: var(--color-ink);
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: white;
+  }
+}
+
+/* Prose overrides for blog posts */
+.prose {
+  @apply max-w-none;
+  color: var(--color-ink);
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  color: var(--color-ink);
+}
+
+.prose h2 {
+  @apply text-2xl mt-10 mb-4 pb-2 border-b border-gray-100;
+}
+
+.prose h3 {
+  @apply text-xl mt-8 mb-3;
+}
+
+.prose a {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 3px;
+}
+
+.prose a:hover {
+  color: var(--color-accent-dark);
+}
+
+.prose img {
+  @apply rounded-xl shadow-md my-8 mx-auto;
+}
+
+.prose code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.875em;
+  background: var(--color-surface-alt);
+  color: var(--color-secondary);
+  @apply px-1.5 py-0.5 rounded;
+}
+
+.prose pre {
+  @apply rounded-xl;
+  background: #0d1117 !important;
+}
+
+.prose pre code {
+  background: transparent;
+  color: inherit;
+  @apply p-0;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-accent-soft);
+  @apply py-3 px-5 rounded-r-lg not-italic;
+  color: var(--color-ink-muted);
+}
+
+.prose blockquote p {
+  @apply my-0;
+}
+
+.prose table {
+  @apply text-sm;
+  border-collapse: collapse;
+}
+
+.prose thead th {
+  background: var(--color-ink);
+  color: white;
+  @apply px-4 py-2 text-left text-xs uppercase tracking-wider font-medium;
+}
+
+.prose tbody tr:nth-child(even) {
+  background: var(--color-surface-alt);
+}
+
+.prose td {
+  @apply px-4 py-2 border border-gray-200;
+}
+
+/* KaTeX */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1em 0;
+}
+
+/* Code highlighting */
+.hljs {
+  background: #0d1117 !important;
+}
+
+/* DataFrames from notebooks */
+.dataframe {
+  font-size: 0.75em;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Reading progress bar */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
+  z-index: 100;
+  transition: width 0.1s linear;
+}
+
+/* Smooth card transitions */
+.post-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+/* Tag pill hover */
+.tag-pill {
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.tag-pill:hover {
+  transform: scale(1.04);
+}
+
+/* Mobile menu animation */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mobile-menu-open {
+  animation: slideDown 0.2s ease forwards;
+}

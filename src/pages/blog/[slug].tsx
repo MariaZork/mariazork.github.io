@@ -45,10 +45,13 @@ const components = {
 export default function PostPage({ post, mdxSource, headings }: PostPageProps) {
   return (
     <Layout
-      title={`${post.title}${post.subtitle ? ' — ' + post.subtitle : ''} | Maria Zorkaltseva`}
+      title={`${post.title}${post.subtitle ? ' — ' + post.subtitle : ''}`}
       description={post.excerpt}
       image={post.image}
       type="article"
+      publishedAt={post.date}
+      author={post.author}
+      keywords={post.tags}
     >
       <ReadingProgress />
 

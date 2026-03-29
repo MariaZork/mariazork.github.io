@@ -7,8 +7,6 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/blog', label: 'Blog' },
-  { href: '/categories', label: 'Categories' },
-  { href: '/tags', label: 'Tags' },
   { href: '/projects', label: 'Projects' },
   { href: '/interview-prep', label: 'Interview Prep' }
 ];

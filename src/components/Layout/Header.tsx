@@ -50,7 +50,7 @@ export default function Header() {
               <span className="font-serif text-lg text-ink leading-none block">
                 Maria Zorkaltseva
               </span>
-              <span className="text-xs text-ink-muted leading-none">ML Developer</span>
+              <span className="text-xs text-ink-muted leading-none">ML Engineer</span>
             </div>
           </Link>
 

@@ -10,12 +10,12 @@ interface HomeProps {
 }
 
 const expertise = [
-  { icon: '🧠', label: 'Machine Learning' },
+  { icon: '🧠', label: 'Applied Machine Learning' },
   { icon: '👁️', label: 'Computer Vision' },
   { icon: '💬', label: 'NLP' },
-  { icon: '🔐', label: 'AI Security' },
+  { icon: '🤖', label: 'Generative AI & LLMs' },
   { icon: '⚙️', label: 'MLOps' },
-  { icon: '📊', label: 'Deep Learning' },
+  { icon: '📊', label: 'Edge AI & TinyML' },
 ];
 
 export default function Home({ posts }: HomeProps) {
@@ -35,7 +35,7 @@ export default function Home({ posts }: HomeProps) {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-soft border border-primary/20 text-primary text-xs font-semibold mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              ML Developer · Paris, France
+              ML Engineer · Paris, France
             </div>
             <h1 className="font-serif text-5xl md:text-6xl text-ink leading-tight mb-5">
               Maria<br />

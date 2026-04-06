@@ -8,7 +8,7 @@ const interests = [
   'Computer Vision',
   'MLOps',
   'Start-ups',
-  'NLP',
+  'LLM',
 ];
 
 const publications = [
@@ -16,23 +16,37 @@ const publications = [
     title: 'Radiation of high-power ultrawideband pulses with elliptical polarization by four-element array of cylindrical helical antennas',
     year: '2018',
     journal: 'Laser and Particle Beams',
-    href: '/assets/pdf/laser&particle.pdf',
+    href: '/pdf/laser&particle.pdf',
   },
   {
     title: 'Numerical Modeling of Ultra Wideband Combined Antennas',
     year: '2017',
     journal: 'Russian Physics Journal',
-    href: '/assets/pdf/numerical_modeling.pdf',
+    href: '/pdf/numerical_modeling.pdf',
   },
   {
     title: 'A source of high-power pulses of elliptically polarized ultrawideband radiation',
     year: '2014',
     journal: 'Review of Scientific Instruments',
-    href: '/assets/pdf/rsi.pdf',
+    href: '/pdf/rsi.pdf',
   },
 ];
 
 const certifications = [
+  {
+    title: 'Python for Cybersecurity',
+    issuer: 'INFOSEC / Coursera',
+    year: '2021',
+    href: 'https://www.coursera.org/account/accomplishments/specialization/certificate/9T72NSWJLHVM',
+    description: '6-course specialization covering Python for cybersecurity, including scripting, automation, and security tools development.',
+  },
+  {
+    title: 'Machine Learning Engineering for Production (MLOps)',
+    issuer: 'DeepLearning.AI',
+    year: '2021',
+    href: 'https://www.coursera.org/account/accomplishments/specialization/certificate/VVLZLUQGD25L',
+    description: '4-course specialization covering ML production, MLOps, CI/CD for ML, and model monitoring.',
+  },
   {
     title: 'Data Engineering with Google Cloud',
     issuer: 'Google / Coursera',
@@ -99,14 +113,27 @@ export default function AboutPage() {
               />
             </div>
             <h1 className="font-serif text-3xl text-ink mb-1">Maria Zorkaltseva</h1>
-            <p className="text-primary font-semibold mb-4">Machine Learning Developer · Paris, France</p>
-            <p className="text-ink-muted leading-relaxed max-w-2xl">
-              I'm proficient in machine learning and deep learning areas such as computer vision,
-              natural language processing, and predictive analytics. I also have more than seven years
-              of experience in science and a strong background as a researcher with 19 publications in
-              well-known journals. My main programming language is Python (numpy, scipy, matplotlib,
-              pandas, scikit-learn) with Keras and PyTorch for deep learning. Mathematical education
-              gives me a strong foundation in pure mathematics and statistics.
+            <p className="text-primary font-semibold mb-4">Machine Learning Engineer · Paris, France</p>
+            <p className="text-ink-muted leading-relaxed max-w-2xl">               
+              14+ years of experience in applied AI across healthcare, cybersecurity, IoT/RF sensing. I design and deploy end-to-end ML systems - from research prototyping to production at scale. Author of 19 peer-reviewed publications.<br />
+              <br />
+              🧩 Current R&amp;D &amp; Projects<br />
+
+              - LLM Engineering - Fine-tuning with LoRA/QLoRA, RAG, LangGraph agent orchestration, MCP integrations<br />
+              - Wi-Fi CSI / RF Sensing - Activity recognition and indoor localization<br />
+              - Medical Imaging - WSI pathology pipelines: segmentation, tiling, RLE encoding, UNet architectures<br />
+              - Physics-Informed ML - PINNs for biomechanical modeling, Koopman operator + Transformer hybrids<br />
+              - Data Engineering - Streaming pipelines, BigQuery, dbt, Kestra, dlt<br />
+              <br />
+              🔬 Research & Industry Interests<br />
+
+              - Edge AI & IoT: on-edge intelligence, distributed IoT systems, sensor-driven applications<br />
+              - HealthTech & BioTech: histology, radiology, medical imaging, AI for personalized medicine, drug discovery and investigation, multimodal biological data<br />
+              - Multi-Omics & Computational Biology: integrating genomics, transcriptomics, proteomics, and other biological signals<br />
+              - Cybersecurity: fraud detection, account takeover prevention, malware detection, adversarial ML<br />
+              - LegalTech: NLP for legal documents, semantic search, knowledge extraction<br />
+              - Quantitative Engineering: time series modeling, optimization, stochastic calculus, derivative pricing models, portfolio optimization<br />
+              - Chess: Stockfish's heuristics, AlphaZero’s neural networks, analytics and AI chess coaching<br />
             </p>
 
             {/* Social links */}

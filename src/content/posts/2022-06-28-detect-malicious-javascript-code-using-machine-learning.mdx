@@ -32,9 +32,15 @@ In this article, we will look at some related work to get an idea of ​​what 
 
 In [Detecting Obfuscated JavaScripts using Machine Learning](https://www.researchgate.net/publication/321805699_Detecting_Obfuscated_JavaScripts_using_Machine_Learning) the authors used a dataset of regular, miniﬁed, and obfuscated samples from a content delivery network jsDelivr, the Alexa top 500 websites, a set of malicious JavaScript samples from the Swiss Reporting and Analysis Centre for Information Assurance [MELANI](https://www.ncsc.admin.ch/ncsc/en/home.html). Authors showed that it is possible to distinguish between obfuscated and non-obfuscated scripts with precision and recall around 99%. The following set of features has been used:
 
-![](/assets/img/2022-06-28-detect-malicious-javascript/1*GVILYOzLt7CU0KftJYZzvw.png)
-
-*Static features for JavaScript snippets, source: [Detecting Obfuscated JavaScripts using Machine Learning](https://www.researchgate.net/publication/321805699_Detecting_Obfuscated_JavaScripts_using_Machine_Learning)*
+<BlogImage
+  src="/images/2022-06-28-detect-malicious-javascript/1*GVILYOzLt7CU0KftJYZzvw.png"
+  caption="Static features for JavaScript snippets, source: https://www.researchgate.net/publication/321805699_Detecting_Obfuscated_JavaScripts_using_Machine_Learning"
+  alt="Static features for JavaScript snippets, source: [Detecting Obfuscated JavaScripts using Machine Learning](https://www.researchgate.net/publication/321805699_Detecting_Obfuscated_JavaScripts_using_Machine_Learning)"
+  width={400}
+  height={300}
+  compact
+  maxWidth="max-w-md"
+/>
 
 The extracted set of feature vectors was utilized to train and evaluate three different classifiers: Linear Discriminant Analysis (LDA), Random Forest (RF), and Support Vector Machine (SVM).
 

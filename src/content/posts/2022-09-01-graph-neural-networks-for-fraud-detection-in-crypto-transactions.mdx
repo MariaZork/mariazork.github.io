@@ -299,13 +299,22 @@ df_classes['class'] = df_classes['class'].map({'unknown': 2, '1': 1, '2': 0})
 df_features.head()
 ```
 
-![](/images/2022-09-01-graph-neural-networks-for-fraud/1*nL_Ph3Ngsrhb4KOAtyAWwg.png)
+<BlogImage
+  src="/images/2022-09-01-graph-neural-networks-for-fraud/1*nL_Ph3Ngsrhb4KOAtyAWwg.png"
+  alt=""
+/>
 
 ```python
 df_edges.head()
 ```
 
-![](/images/2022-09-01-graph-neural-networks-for-fraud/1*O5iFBskduZgsd91DCTjN-Q.png)
+| | txId1 | txId2 |
+|---|---|---|
+| 0 | 230425980 | 5530458 |
+| 1 | 232022460 | 232438397 |
+| 2 | 230460314 | 230459870 |
+| 3 | 230333930 | 230595899 |
+| 4 | 232013274 | 232029206 |
 
 ```
 0 — legitimate
@@ -317,7 +326,11 @@ df_edges.head()
 df_classes['class'].value_counts()
 ```
 
-![](/images/2022-09-01-graph-neural-networks-for-fraud/1*zYG_n8cv1e-QBegHtw7K-w.png)
+| class | count |
+|-------|-------|
+| 2 | 157205 |
+| 0 | 42019 |
+| 1 | 4545 |
 
 ```python
 # merging node features DF with classes DF
@@ -601,7 +614,10 @@ print(classification_report(data_train.y[data_train.val_idx].detach().cpu().nump
 print(f"Test data fraud cases, percentage: {y_test_preds[data_train.test_idx].detach().cpu().numpy().sum() / len(data_train.y[data_train.test_idx]) *100} %")
 ```
 
-![](/images/2022-09-01-graph-neural-networks-for-fraud/1*hWnNZ-SjdBEBkWDUTcTS8A.png)
+<BlogImage
+  src="/images/2022-09-01-graph-neural-networks-for-fraud/1*hWnNZ-SjdBEBkWDUTcTS8A.png"
+  alt=""
+/>
 
 ### Train GAT
 
@@ -668,7 +684,10 @@ print(classification_report(data_train.y[data_train.val_idx].detach().cpu().nump
 print(f"Test data fraud cases, percentage: {y_test_preds[data_train.test_idx].detach().cpu().numpy().sum() / len(data_train.y[data_train.test_idx]) *100} %")
 ```
 
-![](/images/2022-09-01-graph-neural-networks-for-fraud/1*gwDndNCapFEJvAs5_WFtsQ.png)
+<BlogImage
+  src="/images/2022-09-01-graph-neural-networks-for-fraud/1*gwDndNCapFEJvAs5_WFtsQ.png"
+  alt=""
+/>
 
 ## Results Comparison
 

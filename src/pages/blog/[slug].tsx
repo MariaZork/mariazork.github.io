@@ -27,9 +27,6 @@ interface PostPageProps {
 }
 
 const components = {
-  img: (props: any) => (
-    <img {...props} className="rounded-xl shadow-md my-8 mx-auto max-w-full" loading="lazy" />
-  ),
   a: (props: any) => (
     <a
       {...props}

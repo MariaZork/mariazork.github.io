@@ -1,37 +1,59 @@
 # 🚀 Maria Zorkaltseva - ML & AI Blog
 
-This repository contains my personal blog focused on **machine learning, AI systems, MLOps, and real-world engineering problems**.
+Personal blog focused on **machine learning, AI systems, MLOps, and real-world engineering problems**.
 
 👉 Live: https://mariazork.github.io
 
----
-
 ## ⚙️ Tech Stack
 
-- Next.js 14
-- MDX (blog content)
+- Next.js 14 (Pages Router, Static Export)
+- MDX for blog content
 - Tailwind CSS
-- Custom React Components
-
----
+- TypeScript
 
 ## 🧪 Local Development
-
-Run the development server:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
 ## 🏗 Build
 
-To build the project:
-
-```
+```bash
 npm run build
 ```
 
-This generates a static site in in /out.
+Generates a static site in `/out` deployed to GitHub Pages.
+
+## 📝 Writing Posts
+
+Blog posts are in `src/content/posts/` as MDX files with frontmatter:
+
+```mdx
+---
+title: Post Title
+subtitle: Optional subtitle
+date: 2024-01-15
+author: Maria Zorkaltseva
+categories: [Machine Learning, Deep Learning]
+tags: [PyTorch, Tutorial]
+image: /images/post-image.jpg
+published: true
+---
+```
+
+### Components in MDX
+
+```mdx
+<BlogImage
+  src="/images/post-image.jpg"
+  alt="Description"
+  caption="Figure 1: Example"
+  zoomable
+/>
+
+<SectionDivider />
+```

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 interface AdUnitProps {
   slot: 'display' | 'in-article' | 'sidebar';

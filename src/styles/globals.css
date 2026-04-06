@@ -74,7 +74,7 @@
 }
 
 .prose img {
-  @apply rounded-xl shadow-md my-8 mx-auto;
+  @apply rounded-xl shadow-md mx-auto;
 }
 
 .prose code {
@@ -147,16 +147,7 @@
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Reading progress bar */
-.reading-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
-  z-index: 100;
-  transition: width 0.1s linear;
-}
+
 
 /* Smooth card transitions */
 .post-card {

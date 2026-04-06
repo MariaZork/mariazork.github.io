@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const ReadingProgress: React.FC = () => {
   const [progress, setProgress] = useState(0);

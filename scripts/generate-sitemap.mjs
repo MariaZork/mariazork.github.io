@@ -168,11 +168,13 @@ if (!fs.existsSync(outDir)) {
   fs.mkdirSync(outDir, { recursive: true });
 }
 
-fs.writeFileSync(path.join(outDir, 'sitemap.xml'), generateSitemapIndex(), 'utf8');
-console.log('✅ sitemap.xml (index)');
-
-fs.writeFileSync(path.join(outDir, 'sitemap-0.xml'), generateSitemap0(posts, allTags, allCategories), 'utf8');
-console.log(`✅ sitemap-0.xml (${posts.length} posts, ${allTags.length} tags, ${allCategories.length} categories)`);
+// Один файл со всеми URL
+fs.writeFileSync(
+  path.join(outDir, 'sitemap.xml'),
+  generateSitemap0(posts, allTags, allCategories),
+  'utf8'
+);
+console.log(`✅ sitemap.xml (${posts.length} posts, ${allTags.length} tags, ${allCategories.length} categories)`);
 
 fs.writeFileSync(path.join(outDir, 'robots.txt'), generateRobotsTxt(), 'utf8');
 console.log('✅ robots.txt');

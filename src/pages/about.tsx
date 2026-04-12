@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout/Layout';
 import Image from 'next/image';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/SEO/Breadcrumbs';
 
 const interests = [
   'AI in Cybersecurity',
@@ -84,10 +85,17 @@ const certifications = [
   },
 ];
 
+const breadcrumbItems = [
+  { name: 'About', href: '/about/' },
+];
+
 export default function AboutPage() {
   return (
     <Layout title="About — Maria Zorkaltseva" description="ML Engineer specializing in Computer Vision, NLP, and AI applications.">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-12">
 
         {/* ── Profile card ── */}
         <div className="bg-white rounded-2xl border border-border shadow-card overflow-hidden mb-10">

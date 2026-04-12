@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Layout from '@/components/Layout/Layout';
+import Breadcrumbs from '@/components/SEO/Breadcrumbs';
 import { getAllPosts } from '@/lib/posts';
 
 interface TagInfo {
@@ -13,12 +14,20 @@ interface TagsIndexProps {
   tags: TagInfo[];
 }
 
+const breadcrumbItems = [
+  { name: 'Tags', href: '/tags/' },
+];
+
 export default function TagsIndex({ tags }: TagsIndexProps) {
   return (
     <Layout
       title="Tags — Maria Zorkaltseva"
       description="Find articles by specific keywords and technologies."
     >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
+      
       <div className="border-b border-border bg-surface-alt">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
           <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">Browse</p>

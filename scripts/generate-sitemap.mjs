@@ -95,7 +95,7 @@ function generateSitemap0(posts, allTags, allCategories) {
     { url: '/tags/',         priority: '0.6', changefreq: 'weekly'  },
   ];
 
-  const today = new Date().toISOString().split('T')[0];
+  const today = new Date().toISOString();
 
   const urls = [];
 
@@ -129,7 +129,7 @@ function generateSitemap0(posts, allTags, allCategories) {
   });
 
   posts.forEach(({ slug, date }) => {
-    const lastmod = new Date(date).toISOString().split('T')[0];
+    const lastmod = new Date(date).toISOString();
     urls.push(`  <url>
     <loc>${SITE_URL}/blog/${escapeXml(slug)}/</loc>
     <lastmod>${lastmod}</lastmod>
@@ -139,7 +139,10 @@ function generateSitemap0(posts, allTags, allCategories) {
   });
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 ${urls.join('\n')}
 </urlset>`;
 }

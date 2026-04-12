@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next';
 import Layout from '@/components/Layout/Layout';
 import PostCard from '@/components/Blog/PostCard';
+import Breadcrumbs from '@/components/SEO/Breadcrumbs';
 import { Post } from '@/types/post';
 import { getAllPosts } from '@/lib/posts';
 
@@ -8,12 +9,20 @@ interface BlogIndexProps {
   posts: Post[];
 }
 
+const breadcrumbItems = [
+  { name: 'Blog', href: '/blog/' },
+];
+
 export default function BlogIndex({ posts }: BlogIndexProps) {
   return (
     <Layout
       title="Blog — Maria Zorkaltseva"
       description="Articles and tutorials on machine learning, deep learning, PyTorch, NLP, and AI in cybersecurity."
     >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
+      
       {/* Header */}
       <div className="border-b border-border bg-surface-alt">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">

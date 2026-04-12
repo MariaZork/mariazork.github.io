@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Layout from '@/components/Layout/Layout';
 import PostCard from '@/components/Blog/PostCard';
+import { WebSiteData, PersonData } from '@/components/SEO';
 import { Post } from '@/types/post';
 import { getAllPosts } from '@/lib/posts';
 
@@ -20,7 +21,7 @@ const expertise = [
 
 export default function Home({ posts }: HomeProps) {
   return (
-    <Layout>
+    <Layout showWebSiteData={true}>
       {/* ── Hero ── */}
       <section className="relative overflow-hidden border-b border-border">
         {/* Background texture */}

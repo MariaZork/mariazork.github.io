@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Layout from '@/components/Layout/Layout';
+import Breadcrumbs from '@/components/SEO/Breadcrumbs';
 import { getAllPosts } from '@/lib/posts';
 
 interface CategoryInfo {
@@ -13,12 +14,20 @@ interface CategoriesIndexProps {
   categories: CategoryInfo[];
 }
 
+const breadcrumbItems = [
+  { name: 'Categories', href: '/categories/' },
+];
+
 export default function CategoriesIndex({ categories }: CategoriesIndexProps) {
   return (
     <Layout
       title="Categories — Maria Zorkaltseva"
       description="Browse all articles organized by technical topic."
     >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
+      
       <div className="border-b border-border bg-surface-alt">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
           <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">Browse</p>

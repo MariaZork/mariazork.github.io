@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Layout from '@/components/Layout/Layout';
+import Breadcrumbs from '@/components/SEO/Breadcrumbs';
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -634,6 +635,10 @@ const FILTERS: { id: Category; label: string }[] = [
   { id: 'algorithms', label: 'Algorithms' },
 ];
 
+const breadcrumbItems = [
+  { name: 'Interview Prep', href: '/interview-prep/' },
+];
+
 export default function InterviewPrepPage() {
   const [filter, setFilter] = useState<Category>('all');
   const [selected, setSelected] = useState<Artifact | null>(null);
@@ -647,6 +652,10 @@ export default function InterviewPrepPage() {
       title="ML Interview Prep — Maria Zorkaltseva"
       description="Math derivations, intuitions, and Python implementations for ML interview preparation. Linear regression, transformers, backprop, optimizers, and more."
     >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
+      
       {/* Header */}
       <div className="border-b border-border bg-surface-alt">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">

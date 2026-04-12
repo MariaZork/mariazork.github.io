@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import Layout from '@/components/Layout/Layout';
 import PostCard from '@/components/Blog/PostCard';
+import Breadcrumbs from '@/components/SEO/Breadcrumbs';
 import { getAllPosts } from '@/lib/posts';
 import { Post } from '@/types/post';
 
@@ -11,11 +12,20 @@ interface TagPageProps {
 }
 
 export default function TagPage({ tag, posts }: TagPageProps) {
+  const breadcrumbItems = [
+    { name: 'Tags', href: '/tags/' },
+    { name: `#${tag}` },
+  ];
+
   return (
     <Layout
       title={`#${tag} — Maria Zorkaltseva`}
       description={`Articles tagged with "${tag}" by Maria Zorkaltseva.`}
     >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
+      
       <div className="border-b border-border bg-surface-alt">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-secondary mb-3">

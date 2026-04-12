@@ -14,6 +14,7 @@ import TableOfContents from '@/components/Blog/TableOfContents';
 import SocialShare from '@/components/Blog/SocialShare';
 import BackToTop from '@/components/UI/BackToTop';
 import SectionDivider from '@/components/Blog/SectionDivider';
+import Breadcrumbs from '@/components/SEO/Breadcrumbs';
 import { Post } from '@/types/post';
 import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import { mdxComponents, CodeCellProvider } from '@/lib/mdx-components';
@@ -40,6 +41,14 @@ const components = {
 };
 
 export default function PostPage({ post, mdxSource, headings }: PostPageProps) {
+  const breadcrumbItems = [
+    { name: 'Blog', href: '/blog/' },
+    { name: post.title },
+  ];
+
+  // Build keywords from categories and tags
+  const allKeywords = [...post.categories, ...post.tags];
+
   return (
     <Layout
       title={`${post.title}${post.subtitle ? ' — ' + post.subtitle : ''}`}
@@ -48,9 +57,13 @@ export default function PostPage({ post, mdxSource, headings }: PostPageProps) {
       type="article"
       publishedAt={post.date}
       author={post.author}
-      keywords={post.tags}
+      keywords={allKeywords}
     >
       <ReadingProgress />
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-4">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
 
       {/* ── Hero ── */}
       <header className="border-b border-border bg-surface-alt">

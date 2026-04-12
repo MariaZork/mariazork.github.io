@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '@/components/Layout/Layout';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/SEO/Breadcrumbs';
 import { useRef, useState } from 'react';
 
 interface Project {
@@ -280,12 +281,20 @@ function ProjectSection({ label, title, projects, headerAction, columns = 3 }: P
   );
 }
 
+const breadcrumbItems = [
+  { name: 'Projects', href: '/projects/' },
+];
+
 export default function ProjectsPage() {
   return (
     <Layout
       title="Projects — Maria Zorkaltseva"
       description="Machine learning projects: Kaggle competitions, web applications, and research."
     >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
+      
       {/* Header */}
       <div className="border-b border-border bg-surface-alt">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">

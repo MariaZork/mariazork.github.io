@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Header from './Header';
 import Footer from './Footer';
+import { WebSiteData, PersonData, WebPageData, ArticleData } from '@/components/SEO';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -13,6 +14,8 @@ interface LayoutProps {
   updatedAt?: string;
   author?: string;
   keywords?: string[];
+  showPersonData?: boolean;
+  showWebSiteData?: boolean;
 }
 
 const SITE_URL = 'https://mariazork.github.io';
@@ -32,6 +35,8 @@ export default function Layout({
   updatedAt,
   author = 'Maria Zorkaltseva',
   keywords = [],
+  showPersonData = true,
+  showWebSiteData = false,
 }: LayoutProps) {
   const router = useRouter();
   const canonical = `${SITE_URL}${router.asPath.split('?')[0]}`;
@@ -54,54 +59,6 @@ export default function Layout({
     'Maria Zorkaltseva',
     ...keywords,
   ];
-
-  const jsonLd = type === 'article'
-    ? {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        headline: title,
-        description,
-        image: ogImage,
-        author: {
-          '@type': 'Person',
-          name: author,
-          url: SITE_URL,
-          sameAs: [
-            'https://github.com/MariaZork',
-            'https://www.linkedin.com/in/maria-zorkaltseva/',
-            'https://scholar.google.com/citations?user=kJHS8ygAAAAJ',
-          ],
-        },
-        publisher: { '@type': 'Person', name: SITE_NAME, url: SITE_URL },
-        url: canonical,
-        ...(publishedAt && { datePublished: publishedAt }),
-        ...(updatedAt && { dateModified: updatedAt }),
-        ...(keywords.length > 0 && { keywords: keywords.join(', ') }),
-        inLanguage: 'en',
-        mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
-      }
-    : {
-        '@context': 'https://schema.org',
-        '@type': 'WebPage',
-        name: pageTitle,
-        description,
-        url: canonical,
-        author: {
-          '@type': 'Person',
-          name: SITE_NAME,
-          jobTitle: 'Lead Machine Learning Engineer',
-          url: SITE_URL,
-          email: 'maria.zorkaltseva@gmail.com',
-          address: { '@type': 'PostalAddress', addressLocality: 'Paris', addressCountry: 'FR' },
-          sameAs: [
-            'https://github.com/MariaZork',
-            'https://www.linkedin.com/in/maria-zorkaltseva/',
-            'https://twitter.com/MZorkaltseva',
-            'https://scholar.google.com/citations?user=kJHS8ygAAAAJ',
-          ],
-          knowsAbout: ['Machine Learning', 'Computer Vision', 'NLP', 'MLOps', 'Deep Learning', 'PyTorch', 'Signal Processing'],
-        },
-      };
 
   return (
     <>
@@ -150,10 +107,30 @@ export default function Layout({
           crossOrigin="anonymous"
         />
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        {/* JSON-LD Structured Data */}
+        {type === 'article' && title && publishedAt ? (
+          <ArticleData
+            headline={title}
+            description={description}
+            image={ogImage}
+            author={author}
+            publishedAt={publishedAt}
+            updatedAt={updatedAt}
+            keywords={keywords}
+            url={canonical}
+          />
+        ) : (
+          <WebPageData
+            name={pageTitle}
+            description={description}
+            url={canonical}
+            image={ogImage}
+            author={author}
+          />
+        )}
+        
+        {showPersonData && <PersonData />}
+        {showWebSiteData && <WebSiteData />}
       </Head>
 
       <div className="flex flex-col min-h-screen bg-surface">

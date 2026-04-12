@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import Layout from '@/components/Layout/Layout';
 import PostCard from '@/components/Blog/PostCard';
+import Breadcrumbs from '@/components/SEO/Breadcrumbs';
 import { getAllPosts } from '@/lib/posts';
 import { Post } from '@/types/post';
 
@@ -16,11 +17,20 @@ export default function CategoryPage({ categoryName, posts }: CategoryPageProps)
     .map(w => w.charAt(0).toUpperCase() + w.slice(1))
     .join(' ');
 
+  const breadcrumbItems = [
+    { name: 'Categories', href: '/categories/' },
+    { name: displayTitle },
+  ];
+
   return (
     <Layout
       title={`${displayTitle} — Maria Zorkaltseva`}
       description={`Articles about ${displayTitle} by Maria Zorkaltseva.`}
     >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
+      
       <div className="border-b border-border bg-surface-alt">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary mb-3">
